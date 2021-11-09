@@ -1,4 +1,4 @@
-#Class diagram
+# Class diagram
 ```PlantUML
 class Sample{
     GPS N
@@ -92,7 +92,7 @@ PhisicalTest "*" -- "1" PhysicalTestingMashine
 ChemicalTest "*" -- "1"  ChemicalTestingEquipment
 
 ```
-#State diagram
+# State diagram
 ``` PlantUML
 State WorkerCreated
 State  
