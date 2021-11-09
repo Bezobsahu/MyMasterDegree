@@ -3,5 +3,5 @@
 //Mainly notes in markdown\
 //Projects to school\
 //Master thesis
-# [FirstSemester](https://github.com/Bezobsahu/MyMasterDegree/blob/main/FirstSemester)
+# [FirstSemester](https://github.com/Bezobsahu/MyMasterDegree/blob/main/FirstSemester.md)
 
