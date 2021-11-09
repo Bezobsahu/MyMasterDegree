@@ -3,5 +3,5 @@
 //Mainly notes in markdown
 //Projects to school
 //Master thesis
-# FirsSemester
+# FirstSemester 
 
