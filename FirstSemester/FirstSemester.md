@@ -3,8 +3,10 @@
 - State diagram
 - Use case diagram
 # Microcomputer
+- Logic funcion sheet
 - Keil backup
+
 # PLC
-- Logo
+- Logo backup
 # Informatic
 # Automatization
