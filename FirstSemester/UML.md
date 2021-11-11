@@ -92,14 +92,26 @@ PhisicalTest "*" -- "1" PhysicalTestingMashine
 ChemicalTest "*" -- "1"  ChemicalTestingEquipment
 
 ```
-# State diagram
+# State diagram of worker
 ``` PlantUML
 State WorkerCreated
-State  
+State WorkerDeleted
+State WorkerEdited
+
 
 [*] -->  WorkerCreated : CreateWorker
 
 
 
+
+
+```
+# State diagram of sample
+```PlantUml
+State SampleTaken
+State SampleOnTheWay
+State SampleStored
+State SampelTested
+State SampleExpired
 
 ```
