@@ -1,0 +1,36 @@
+C51 COMPILER V8.02   JOSEF_KORINEK_FCE_SLOVA                                               11/11/2021 15:47:58 PAGE 1   
+
+
+C51 COMPILER V8.02, COMPILATION OF MODULE JOSEF_KORINEK_FCE_SLOVA
+OBJECT MODULE PLACED IN Josef_Korinek_Fce_slova.OBJ
+COMPILER INVOKED BY: C:\Program Files\Keil\C51\BIN\C51.EXE Josef_Korinek_Fce_slova.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <stdio.h>
+   2          #include <aduc812.h>
+   3          unsigned char bdata inputChar;
+   4          sbit iA = P2^5;
+   5          sbit iB = P2^4;
+   6          sbit iC = P2^3;
+   7          sbit iD = P2^2;
+   8          sbit oF = P2^7;
+   9          main ()
+  10          {iteration:     inputChar=P2;
+  11   1          oF =(iC&&iD||iA&&iB&&~iC||iC&&~iA);
+  12   1      goto iteration;
+  13   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     36    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      1    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

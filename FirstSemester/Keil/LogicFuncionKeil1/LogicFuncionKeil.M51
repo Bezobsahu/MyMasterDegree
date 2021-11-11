@@ -1,19 +1,19 @@
-BL51 BANKED LINKER/LOCATER V6.00                                                        11/10/2021  20:24:30  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.00                                                        11/11/2021  15:05:10  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.00, INVOKED BY:
-C:\PROGRAM FILES\KEIL\C51\BIN\BL51.EXE LogicFuncionKeil.obj TO LogicFuncionKeil RAMSIZE (256)
+C:\PROGRAM FILES\KEIL\C51\BIN\BL51.EXE Josef_Korinek_Fce_bity.obj TO LogicFuncionKeil RAMSIZE (256)
 
 
 MEMORY MODEL: SMALL
 
 
 INPUT MODULES INCLUDED:
-  LogicFuncionKeil.obj (LOGICFUNCIONKEIL)
+  Josef_Korinek_Fce_bity.obj (JOSEF_KORINEK_FCE_BITY)
   C:\PROGRAM FILES\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
 
 
-LINK MAP OF MODULE:  LogicFuncionKeil (LOGICFUNCIONKEIL)
+LINK MAP OF MODULE:  LogicFuncionKeil (JOSEF_KORINEK_FCE_BITY)
 
 
             TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
@@ -21,34 +21,34 @@ LINK MAP OF MODULE:  LogicFuncionKeil (LOGICFUNCIONKEIL)
 
             * * * * * * *   D A T A   M E M O R Y   * * * * * * *
             REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
-            DATA    0008H     0004H     UNIT         ?DT?LOGICFUNCIONKEIL
+            DATA    0008H     0004H     UNIT         ?DT?JOSEF_KORINEK_FCE_BITY
             IDATA   000CH     0001H     UNIT         ?STACK
 
             * * * * * * *   C O D E   M E M O R Y   * * * * * * *
             CODE    0000H     0003H     ABSOLUTE     
                     0003H     07FDH                  *** GAP ***
-            CODE    0800H     0037H     UNIT         ?PR?MAIN?LOGICFUNCIONKEIL
+            CODE    0800H     0037H     UNIT         ?PR?MAIN?JOSEF_KORINEK_FCE_BITY
             CODE    0837H     000CH     UNIT         ?C_C51STARTUP
 
 
 
-OVERLAY MAP OF MODULE:   LogicFuncionKeil (LOGICFUNCIONKEIL)
+OVERLAY MAP OF MODULE:   LogicFuncionKeil (JOSEF_KORINEK_FCE_BITY)
 
 
 SEGMENT
   +--> CALLED SEGMENT
 ---------------------
 ?C_C51STARTUP
-  +--> ?PR?MAIN?LOGICFUNCIONKEIL
+  +--> ?PR?MAIN?JOSEF_KORINEK_FCE_BITY
 
 
 
-SYMBOL TABLE OF MODULE:  LogicFuncionKeil (LOGICFUNCIONKEIL)
+SYMBOL TABLE OF MODULE:  LogicFuncionKeil (JOSEF_KORINEK_FCE_BITY)
 
   VALUE           TYPE          NAME
   ----------------------------------
 
-  -------         MODULE        LOGICFUNCIONKEIL
+  -------         MODULE        JOSEF_KORINEK_FCE_BITY
   C:0000H         SYMBOL        _ICE_DUMMY_
   D:00A0H         PUBLIC        P2
   D:0008H         PUBLIC        secondAnd
@@ -59,7 +59,7 @@ SYMBOL TABLE OF MODULE:  LogicFuncionKeil (LOGICFUNCIONKEIL)
   D:000AH         PUBLIC        thirdAnd
   B:00A0H.7       PUBLIC        oF
   D:000BH         PUBLIC        firstAnd
-BL51 BANKED LINKER/LOCATER V6.00                                                      11/10/2021  20:24:30  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.00                                                      11/11/2021  15:05:10  PAGE 2
 
 
   -------         PROC          MAIN
@@ -75,7 +75,7 @@ SYMBOL TABLE OF MODULE:  LogicFuncionKeil (LOGICFUNCIONKEIL)
   C:082CH         LINE#         18
   C:0835H         LINE#         19
   -------         ENDPROC       MAIN
-  -------         ENDMOD        LOGICFUNCIONKEIL
+  -------         ENDMOD        JOSEF_KORINEK_FCE_BITY
 
 ******************************************************************************
 * RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0037H BYTE ( 2%) *

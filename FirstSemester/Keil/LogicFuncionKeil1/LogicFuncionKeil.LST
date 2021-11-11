@@ -1,4 +1,4 @@
-C51 COMPILER V8.02   LOGICFUNCIONKEIL                                                      11/10/2021 20:24:30 PAGE 1   
+C51 COMPILER V8.02   LOGICFUNCIONKEIL                                                      11/11/2021 14:32:36 PAGE 1   
 
 
 C51 COMPILER V8.02, COMPILATION OF MODULE LOGICFUNCIONKEIL
@@ -9,7 +9,7 @@ line level    source
 
    1          #include <stdio.h>
    2          #include <ADUC812.H>
-   3          //realizace logické fce
+   3          //realizace logicke fce
    4          sbit iA = P2^5;
    5          sbit iB = P2^4;
    6          sbit iC = P2^3;
@@ -27,7 +27,6 @@ line level    source
   18   1              if ((helpChar&0x08)==0) oF=0; else oF=1;
   19   1          goto iteration;
   20   1      }
-  21          
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE

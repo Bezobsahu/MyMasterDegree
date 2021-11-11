@@ -1,0 +1,85 @@
+BL51 BANKED LINKER/LOCATER V6.00                                                        11/11/2021  15:21:11  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.00, INVOKED BY:
+C:\PROGRAM FILES\KEIL\C51\BIN\BL51.EXE Josef_Korinek_Fce_tab.obj TO LogicFuncionKeil3 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  Josef_Korinek_Fce_tab.obj (JOSEF_KORINEK_FCE_TAB)
+  C:\PROGRAM FILES\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  LogicFuncionKeil3 (JOSEF_KORINEK_FCE_TAB)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     001AH     UNIT         ?PR?MAIN?JOSEF_KORINEK_FCE_TAB
+            CODE    081AH     0010H     UNIT         ?CO?JOSEF_KORINEK_FCE_TAB
+            CODE    082AH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   LogicFuncionKeil3 (JOSEF_KORINEK_FCE_TAB)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?JOSEF_KORINEK_FCE_TAB
+
+?PR?MAIN?JOSEF_KORINEK_FCE_TAB
+  +--> ?CO?JOSEF_KORINEK_FCE_TAB
+
+
+
+SYMBOL TABLE OF MODULE:  LogicFuncionKeil3 (JOSEF_KORINEK_FCE_TAB)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        JOSEF_KORINEK_FCE_TAB
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  D:00E8H         PUBLIC        I2CCON
+  D:00E8H         PUBLIC        DCON
+  C:0800H         PUBLIC        main
+  C:081AH         PUBLIC        outputTruthTable
+  -------         PROC          MAIN
+BL51 BANKED LINKER/LOCATER V6.00                                                      11/11/2021  15:21:11  PAGE 2
+
+
+  -------         DO            
+  D:0007H         SYMBOL        input
+  D:0007H         SYMBOL        filteredInput
+  C:0800H         SYMBOL        iteration
+  -------         ENDDO         
+  C:0800H         LINE#         4
+  C:0800H         LINE#         5
+  C:0800H         LINE#         7
+  C:0806H         LINE#         8
+  C:0809H         LINE#         9
+  C:0815H         LINE#         10
+  C:0818H         LINE#         12
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        JOSEF_KORINEK_FCE_TAB
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 002AH BYTE ( 2%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=57
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

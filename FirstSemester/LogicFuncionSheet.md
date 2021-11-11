@@ -53,6 +53,25 @@ void main ()
 }
 
 ```
+$F = f(A,B,C,D)=C.D+A.B./C+C./A$
+
+```c
+#include <stdio.h>
+#include <aduc812.h>
+unsinged char bdata inputChar;
+sbit iA = P2^5;
+sbit iB = P2^4;
+sbit iC = P2^3;
+sbit iD = P2^2;
+sbit oF = P2^7;
+main ()
+{iteration:     inpuptChar=P2;
+    oF=(iC&&iD||iA&&iB&&~iC||iC&&~A);
+goto iteration
+}
+
+```
+
 ```c
 #include <stdio.h>
 #include <aduc812.h>
