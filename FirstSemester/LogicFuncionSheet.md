@@ -19,6 +19,7 @@ A|B|C|D|Y|
 |1|1|0|1|1
 |1|1|1|0|0
 |1|1|1|1|1
+# Funkce přepsaná do bitobé tabulky
 $F = f(A,B,C,D)=C.D+A.B./C+C./A$
 |b7|b6|b5|b4|b3|b2|b1|b0|des
 |-|-|-|-|-|-|-|-|-|
