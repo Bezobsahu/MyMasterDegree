@@ -1,4 +1,4 @@
-#Cvičení
+# Cvičení
 Generování kmitočtu 10 kH
 ```c
 #include <stdio.h>
@@ -108,7 +108,7 @@ cycle:
     goto cycle;
     
 ```
-##3. Zadání
+## 3. Zadání
 |vztah pro T/2|jednotky čas. úseku|přesnost %|režim |převod|THn|TLn|TLn korekce
 |-|-|-|-|-|-|-|-|-|
 | 0,6| s |+/- 1 ms|1|
