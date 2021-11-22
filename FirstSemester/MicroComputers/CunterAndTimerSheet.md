@@ -103,7 +103,11 @@ cycle:
     goto cycle;
     
 ```
+<<<<<<< HEAD
 ### 3. Zadání
+=======
+## 3. Zadání
+>>>>>>> refs/remotes/origin/main
 |vztah pro T/2|jednotky čas. úseku|přesnost %|režim |převod|THn|TLn|TLn korekce
 |-|-|-|-|-|-|-|-|-|
 | 0,6| s |+/- 1 ms|1|9x65535+65535|D8|36|bez
@@ -133,5 +137,10 @@ cycle:
     clockChar=0;
     LED = (!LED);
     goto cycle;
+<<<<<<< HEAD
 }
 ```
+=======
+    
+```
+>>>>>>> refs/remotes/origin/main
