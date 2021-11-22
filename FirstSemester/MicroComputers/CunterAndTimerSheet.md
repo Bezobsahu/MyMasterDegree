@@ -1,4 +1,4 @@
-#Cvičení
+# Cvičení
 Generování kmitočtu 10 kH
 ```c
 #include <stdio.h>
@@ -41,11 +41,6 @@ cycle:
 goto cycle;
 }
 ````
-Zadání
-
-
-|2.| 12| ms| +/- 5 µs
-|3.| 0,6| s |+/- 1 ms
 N - pořadové číslo v systému tedy 6
 jeden MHz je jedna µs
 schema časovače 8 51 má na oscilátoru zpomalení 12 tiku
@@ -108,30 +103,35 @@ cycle:
     goto cycle;
     
 ```
-##3. Zadání
+### 3. Zadání
 |vztah pro T/2|jednotky čas. úseku|přesnost %|režim |převod|THn|TLn|TLn korekce
 |-|-|-|-|-|-|-|-|-|
-| 0,6| s |+/- 1 ms|1|
+| 0,6| s |+/- 1 ms|1|9x65535+65535|D8|36|bez
 ```c
 #include <stdio.h>
 #include <ADUC812.H>
 
 sbit LED=P3^4;
 
+unsigned char clockChar=0;
+
 main ()
 {
     TMOD = 0x01; //b1 = 0 , b0 =  1 řežim 1
 
 cycle:
-    TH0 = 0xD1; // nastavení honoty kdy dojde k přetečení
-    TL0 = 0x2A; // nastavení honoty kdy dojde k přetečení
+    TH0 = 0xD8; // nastavení honoty kdy dojde k přetečení
+    TL0 = 0x36; // nastavení honoty kdy dojde k přetečení
     TR0 = 1; //spuštění časovače
-
-    while (!TF0); //přetečení
-        TR0 = 0; //vypnutí časovače
-
+    while (clockChar <10)
+       {
+        while (!TF0); //přetečení
+        clockChar = clockChar+1;
         TF0 = 0;
-        LED = (!LED);
+    }
+    TR0 = 0; //vypnutí časovače
+    clockChar=0;
+    LED = (!LED);
     goto cycle;
-    
+}
 ```
