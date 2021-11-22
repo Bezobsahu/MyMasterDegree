@@ -28,7 +28,7 @@ class ChemicalTest{
     Author
 }
 
-class PhisicalTest{
+class PhysicalTest{
     DateOfTesting
     UsedForce
     MaximumDeformation
@@ -70,12 +70,12 @@ class Room{
     Type
 }
 
-Sample "1" -- "*" PhisicalTest
+Sample "1" -- "*" PhysicalTest
 Sample "1" -- "*" ChemicalTest
 
 Worker "1" -- "*" Sample
 Worker "1" -- "*" ChemicalTest
-Worker "1" -- "*" PhisicalTest
+Worker "1" -- "*" PhysicalTest
 Worker - Equipment: inspect >
 
 Equipment <|-- PhysicalTestingMashine
@@ -88,7 +88,7 @@ Building "1" *-- "*" Room
 
 Room "1" -- "*" Equipment
 
-PhisicalTest "*" -- "1" PhysicalTestingMashine
+PhysicalTest "*" -- "1" PhysicalTestingMashine
 ChemicalTest "*" -- "1"  ChemicalTestingEquipment
 
 ```
@@ -108,10 +108,41 @@ State WorkerEdited
 ```
 # State diagram of sample
 ```PlantUml
-State SampleTaken
+
+State SampleTaken :/do /entry /exit
 State SampleOnTheWay
 State SampleStored
 State SampelTested
 State SampleExpired
+State SampleContaminated
+State SampleDe
+
+[*] --> SampleTaken : WorkerTakeSample (atributs)[condition] /action
+
+
 
 ```
+#Use case diagram
+``` plantuml
+
+package ŠKOLA{
+    :Košík:
+:Matěj:
+:Alex:
+:Dave:
+:Alex:
+:Slovák:
+:Dan:
+:Martin:
+:Pepí:
+
+}
+
+package DOMA{
+    :Učitel:
+
+}
+(Systém)
+
+```
+
