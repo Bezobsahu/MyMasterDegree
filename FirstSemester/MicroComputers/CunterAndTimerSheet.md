@@ -103,11 +103,9 @@ cycle:
     goto cycle;
     
 ```
-<<<<<<< HEAD
+
 ### 3. Zadání
-=======
-## 3. Zadání
->>>>>>> refs/remotes/origin/main
+
 |vztah pro T/2|jednotky čas. úseku|přesnost %|režim |převod|THn|TLn|TLn korekce
 |-|-|-|-|-|-|-|-|-|
 | 0,6| s |+/- 1 ms|1|9x65535+65535|D8|36|bez
@@ -137,10 +135,45 @@ cycle:
     clockChar=0;
     LED = (!LED);
     goto cycle;
-<<<<<<< HEAD
+
 }
 ```
-=======
-    
+```C
+#include <stdio.h>
+#include <ADUC812.H>
+
+sbit LED=P3^4;
+sbit SW1=P3^2;
+int CAS= -50000;
+unsigned int pocet_pret=0;
+
+void extern1 () interrupt 0
+{
+    LED=0;
+    TL1=CAS;
+    TH1=(CAS>>8);
+    TR1=1;
+}
+
+void timer1 () interrupt 3 
+{
+    TL1=CAS;
+    TH1=(CAS>>8);
+    pocet_pret++;
+    if (pocet_pret==40)
+    {
+        LED=1;
+        pocet_pret=0;
+        TR=0;
+    }
+main ()
+{
+    TMOD = 0x10;
+    TCON = 0x05;
+    IE = 0#89;
+
+sem: goto sem;
+
+}
+}
 ```
->>>>>>> refs/remotes/origin/main

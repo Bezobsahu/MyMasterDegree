@@ -1,0 +1,35 @@
+<html>
+<body>
+<pre>
+<h1>µVision3 Build Log</h1>
+<h2>Project:</h2>
+C:\Users\Státnice\MyMasterDegree\FirstSemester\Keil\LogicFuncionKeil2\LogicFuncionKeil2.uv2
+Project File Date:  11/11/2021
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling Josef_Korinek_Fce_slova.c...
+JOSEF_KORINEK_FCE_SLOVA.C(3): error C129: missing ';' before 'char'
+Target not created
+Build target 'Target 1'
+compiling Josef_Korinek_Fce_slova.c...
+JOSEF_KORINEK_FCE_SLOVA.C(3): error C129: missing ';' before 'char'
+Target not created
+Build target 'Target 1'
+compiling Josef_Korinek_Fce_slova.c...
+JOSEF_KORINEK_FCE_SLOVA.C(3): error C129: missing ';' before 'char'
+Target not created
+Build target 'Target 1'
+compiling Josef_Korinek_Fce_slova.c...
+JOSEF_KORINEK_FCE_SLOVA.C(10): error C202: 'inpuptChar': undefined identifier
+JOSEF_KORINEK_FCE_SLOVA.C(11): error C202: 'A': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling Josef_Korinek_Fce_slova.c...
+JOSEF_KORINEK_FCE_SLOVA.C(11): error C202: 'A': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling Josef_Korinek_Fce_slova.c...
+linking...
+Program Size: data=10.0 xdata=0 code=51
+"LogicFuncionKeil2" - 0 Error(s), 0 Warning(s).

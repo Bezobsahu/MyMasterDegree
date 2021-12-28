@@ -1,0 +1,124 @@
+C51 COMPILER V8.02   ENGINECONTROLKEIL                                                     12/01/2021 13:22:47 PAGE 1   
+
+
+C51 COMPILER V8.02, COMPILATION OF MODULE ENGINECONTROLKEIL
+OBJECT MODULE PLACED IN EngineControlKeil.OBJ
+COMPILER INVOKED BY: C:\Program Files\Keil\C51\BIN\C51.EXE EngineControlKeil.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <stdio.h>
+   2          #include <ADUC812.H>
+   3          //output
+   4          sbit o1 = P2^0;
+   5          sbit o2 = P2^1;
+   6          sbit o3 = P2^2;
+   7          sbit o4 = P2^3;
+   8          //input
+   9          sbit i1 = P3^0; //0 stop 1 start
+  10          sbit i2 = P3^1; //0 doprava 1 doleva
+  11          
+  12          
+  13          
+  14          void main ()
+  15          {
+  16   1      TMOD = 0x01; //b1 = 0 , b0 =  1 øežim 1
+  17   1      o1=0;
+  18   1      o2=0;
+  19   1      o3=0;
+  20   1      o4=0;
+  21   1      
+  22   1      cycle:
+  23   1              if (i1 == 1){
+  24   2      
+  25   2                      if       (i2 == 0){
+  26   3      
+  27   3                                              TH0 = 0x69; // nastavení honoty kdy dojde k pøeteèení
+  28   3                                      TL0 = 0x00; // nastavení honoty kdy dojde k pøeteèení
+  29   3                                      TR0 = 1; //spuštìní èasovaèe
+  30   3                      
+  31   3                                              while (!TF0); //pøeteèení
+  32   3                                      TR0 = 0; //vypnutí èasovaèe
+  33   3                      
+  34   3                                      TF0 = 0;
+  35   3                      
+  36   3                                      if (o4 == 1){
+  37   4                                                      o4 = (!o4);
+  38   4                                                      o1 = (!o1);
+  39   4                                              }
+  40   3                                              else if (o1 == 1){
+  41   4                                                      o1 = (!o1);
+  42   4                                                      o2 = (!o2);
+  43   4                                              }
+  44   3                                              else if (o2==1){
+  45   4                                                      o2 = (!o2);
+  46   4                                                      o3 = (!o3);
+  47   4                                              }
+  48   3                                              else if (o3==1){
+  49   4                                                      o3 = (!o3);
+  50   4                                                      o4 = (!o4);
+  51   4                                              }
+  52   3      
+  53   3                          else o1=1;
+  54   3                              }
+  55   2                       else { //if i2=1
+C51 COMPILER V8.02   ENGINECONTROLKEIL                                                     12/01/2021 13:22:47 PAGE 2   
+
+  56   3                                         
+  57   3                                              TH0 = 0x69; // nastavení honoty kdy dojde k pøeteèení
+  58   3                                      TL0 = 0x00; // nastavení honoty kdy dojde k pøeteèení
+  59   3                                      TR0 = 1; //spuštìní èasovaèe
+  60   3                      
+  61   3                                              while (!TF0); //pøeteèení
+  62   3                                      TR0 = 0; //vypnutí èasovaèe
+  63   3                      
+  64   3                                      TF0 = 0;
+  65   3                      
+  66   3                                      if (o4 == 1){
+  67   4                                                      o4 = (!o4);
+  68   4                                                      o3 = (!o3);
+  69   4                                              }
+  70   3                                              else if (o1 == 1){
+  71   4                                                      o1 = (!o1);
+  72   4                                                      o4 = (!o4);
+  73   4                                              }
+  74   3                                              else if (o2==1){
+  75   4                                                      o2 = (!o2);
+  76   4                                                      o1 = (!o1);
+  77   4                                              }
+  78   3                                              else if (o3==1){
+  79   4                                                      o3 = (!o3);
+  80   4                                                      o2 = (!o2);
+  81   4                                              }
+  82   3                          else o1=1;
+  83   3      
+  84   3                       
+  85   3                          } 
+  86   2          }
+  87   1                      
+  88   1                                
+  89   1                      
+  90   1              else {
+  91   2                      o1 = 0; 
+  92   2                      o2 = 0;
+  93   2                      o3 = 0; 
+  94   2                      o4 = 0;
+  95   2                      }
+  96   1      
+  97   1      goto cycle;
+  98   1      
+  99   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    137    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

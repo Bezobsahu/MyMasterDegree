@@ -1,0 +1,50 @@
+C51 COMPILER V8.02   GENBLINK10K                                                           11/30/2021 15:25:49 PAGE 1   
+
+
+C51 COMPILER V8.02, COMPILATION OF MODULE GENBLINK10K
+OBJECT MODULE PLACED IN GenBlink10k.OBJ
+COMPILER INVOKED BY: C:\Program Files\Keil\C51\BIN\C51.EXE GenBlink10k.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <stdio.h>
+   2          #include <ADUC812.H>
+   3          
+   4          sbit LED=P3^4;
+   5          
+   6          unsigned char clockChar=0;
+   7          
+   8          main ()
+   9          {
+  10   1          TMOD = 0x01; //b1 = 0 , b0 =  1 øežim 1
+  11   1      
+  12   1      cycle:
+  13   1          TH0 = 0xD8; // nastavení honoty kdy dojde k pøeteèení
+  14   1          TL0 = 0x36; // nastavení honoty kdy dojde k pøeteèení
+  15   1          TR0 = 1; //spuštìní èasovaèe
+  16   1          while (clockChar <10)
+  17   1             {
+  18   2              while (!TF0); //pøeteèení
+  19   2              clockChar = clockChar+1;
+  20   2              TF0 = 0;
+  21   2          }
+  22   1          TR0 = 0; //vypnutí èasovaèe
+  23   1          clockChar=0;
+  24   1          LED = (!LED);
+  25   1          goto cycle;
+  26   1      
+  27   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     36    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      1    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

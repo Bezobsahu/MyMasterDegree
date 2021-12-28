@@ -1,4 +1,18 @@
-#Čítače a časovače
+# Stavebnice logických obvodů
+###TTL
+![TTL](./Images/TTLSchema.JPG)
+1. Napájecí napětí:
+$U_{CC}=5V(nejčastěji)$
+- Napěťové rozsahy
+$U_{IL}=0-0,8V $
+$U_{IH}=2-5,5V$
+$U_{OL}=0-0,4V$
+$U_{OH}=2,4-U_{CC}$
+2. Šumová imunita
+
+___
+
+Čítače a časovače
 - **dva binární čítače/časovače**
 - jejich stav je softwarově dostupný v registrech TH0, TL0 resp. TH1,TL1
 - použití:
