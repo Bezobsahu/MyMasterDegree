@@ -53,8 +53,110 @@ $t_{pd} =20ns$
 
 5. Převodní charakteristika
 ![HCCharacteristic](./Images/HCharacteristic.JPG)
+# Sekvenční logické obvody
+### RS klopný obvod
+#### Pomocí nand
+Set
+[![RSFlipFlopSet](./Images/RSFlipFlopSet.JPG)](https://www.falstad.com/circuit/e-nandff.html)
+Reset
+[![RSFlipFlopReset](./Images/RSFlipFlopReset.JPG)](https://www.falstad.com/circuit/e-nandff.html)
+Memory
+[![RSFlipFlopMemory](./Images/RSFlipFlopMemory.JPG)](https://www.falstad.com/circuit/e-nandff.html)
+### Synchronní RS 
+obohaceno o dva nandy na začátek
+### D klopný obvod
+[![DFlipFlopMemory](./Images/DFlipFlop.JPG)](https://www.falstad.com/circuit/e-edgedff.html)
+### JK klopný obvod
+[![JK](./Images/JKFlipFlop.JPG)](https://www.falstad.com/circuit/e-jkff.html)
+### Posuvný registr
+[![Register](./Images/ShiftRegister.JPG)](https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgpABZsKBTAWjDACgwEk8q09wwKEHyhQOXYXn4jsaYflGRxSGj3n8axQusVsASiDXZs2poRohj2iELBxh0JCkeLHbAO6GqVr8JpUlTxQpSxNJaX8xT1VvMJi-AI9fH2D+H0Dw0O149KSwDG0RVJ0M7DwLEXiRJQAZX2qS0QAzAEMAGwBnBmolTiRCDCERQhCGjIQCnQGhhQzphJB53OijMKWw3oly6QU8c0aMgp3+bZKk9e1T5cNVLJuIxKA) 
+
+### Asynchronní binární čítač
+[![Counter](./Images/Counter.JPG)](https://www.falstad.com/circuit/e-counter.html)
+
+# Programovatelné logické obvody a polovodičové paměti
+## PLD
+Programovatelné logické pole jsou realizovány kombinací:
+- AND hradel
+- OR hradel
+- propojovacích polí
+- inventurů a klopných obvodů
+![PLD](./Images/PLDExample.JPG)
+
+#### PROM
+Programovatelné read only memory jsou realizovány kombinací: 
+- neprogramovatelné propojovací pole hradel AND
+- programovatelné pole hradel OR
+
+![PROM](./Images/PROMSchema.JPG)
+
+#### PAL
+Programovatelné array (pole) logic jsou realizovány kombinací: 
+- programovatelné propojovací pole hradel AND
+- neprogramovatelné pole hradel OR
+
+![PAL](./Images/PALSchema.JPG)
+
+#### FPLA
+Field (polové) programovatelné logické array (pole) jsou realizovány kombinací: 
+- programovatelné propojovací pole hradel AND
+- programovatelné pole hradel OR
+![FPLA](./Images/FPLASchema.JPG)
+
+#### GAL
+Obecné (generic) polové (array) logiky jsou realizovány kombinací:
+- programovatelné pole hradel AND
+- pevné pole hradel OR
+- výstup hradla OR s makrobuňkou OLM (Output Logic
+Macrocell)
+![GAL](./Images/GALSchema.JPG)
+
+#### FPGA
+(Field Programmable Gate Array)
+- programovatelná logické pole s jednoduchými funkčními
+bloky
+- reprogramovatelná
+- matice kovových propojovacích vodičů - propojují
+jednotlivé bloky
+![FPGA](./Images/FPGASchema.JPG)
+**IOB** (INPUT/OUTPUT BLOCK)
+**CLB** (Configurable Logic
+Block) 
+**PI** 
+![PI](./Images/FPGA_PISchema.JPG)
+
+# Číselné soustavy
+### BCD soustava
+(Binary Coded Decimal)
+0-9 v binárním zápisu 
+### Grayův kód
+mění se jen jeden bit 
+používá se k měření úhlů
+### Zabezpečené kódy
+- detekční kódy – schopné chyby nalézt při přenosu,
+- korekční kódy – schopné chybu nalézt a opravit,
+- bezpečnostní kódy – schopné zabezpečit přenos proti
+neoprávněnému čtení (šifrování)
+### CRC
+(cyclic redundancy check)
+- stanovíme si generační polynom (1001)
+- přidáme bity na konec dat (0000)
+- data vyXorujeme na nulu pomocí polynomu
+- přidané bity nenulujeme jen Xorujeme (0110)
+- bity zapíšeme za konec dat (data0101)
+- po přenosu jsme schopni zjisti zda došlo k chybě 
+- pomocí polynomu xoruje z pravé strany
+- až dojde k vynulování 
+- v případě že k vynulování nedošlo pak je chyba v přenosu
+
+
+
+
+
 
 ___
+
+
 
 Čítače a časovače
 - **dva binární čítače/časovače**

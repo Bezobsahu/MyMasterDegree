@@ -166,7 +166,7 @@ L2={$\lambda$,b, b...b, ab...b, aabb...}
 L3={$\lambda$}
 ### Přepisovací pravidlo 
 řetězec     w=uxv
-pravilo     x -> y
+pravilo     $x \to y$
 z=uxv
 
 //u zkoušky pravá a levá lineární gramatika
