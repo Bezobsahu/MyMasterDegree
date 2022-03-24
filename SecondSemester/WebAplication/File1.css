@@ -1,0 +1,38 @@
+header{
+    height: 100px;
+    background: rgb(85, 255, 0);
+
+    display: flex;
+    justify-content: right;     
+    align-items: center;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+aside{
+    background: rebeccapurple;
+    /*float: left;
+    width: calc(100%/3);*/
+    flex-basis: 25%;
+}
+main{
+    background: orchid;
+    /*float: left;
+    width: calc((100%/3)*2);*/
+    flex-basis: 75%;
+
+}
+footer{
+    /*clear: left;*/
+    background:gray; 
+}
+
+@media (min-width: 250px){
+    .content {
+        flex-direction: row;
+    }
+}

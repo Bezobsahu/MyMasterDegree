@@ -1,17 +1,8 @@
 import os
 import sys
+firstFileName="Bio_chmel_200427.tif"
+firstFileAbsolutePath = r'C:\Users\Státnice\MyMasterDegree\MasterThesis\DP_podklady\DP_podklady\Bio_chmel_200427.tif '#os.path.abspath(firstFileName)
+#firstFileInfo=QFileInfo(firstFileAbsolutePath)
+firstFileLayer= iface.addRasterLayer(firstFileAbsolutePath,firstFileName)
 
-firsFileName="Bio_chmel_200427"
-
-absolutepath = os.path.abspath('SecondScriptTesting.py')
-print(absolutepath)
-
-fileDirectory = os.path.dirname(absolutepath)
-print(fileDirectory)
-#Path of parent directory
-parentDirectory = os.path.dirname(fileDirectory)
-print(parentDirectory)
-#Navigate to Strings directory
-newPath = os.path.join(parentDirectory, 'Strings')   
-print(newPath)
 

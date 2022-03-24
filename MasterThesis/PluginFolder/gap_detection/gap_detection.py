@@ -23,7 +23,9 @@
 """
 from qgis.PyQt.QtCore import QSettings, QTranslator, QCoreApplication
 from qgis.PyQt.QtGui import QIcon
-from qgis.PyQt.QtWidgets import QAction
+from qgis.PyQt.QtWidgets import *
+from qgis.core import * 
+
 
 # Initialize Qt resources from file resources.py
 from .resources import *
@@ -61,6 +63,8 @@ class GapDetection:
 
         # Declare instance attributes
         self.actions = []
+        self.layer_names = []
+        self.all_layers = []
         self.menu = self.tr(u'&Hop Gap Detection')
 
         # Check if plugin was started the first time in current QGIS session
@@ -188,6 +192,21 @@ class GapDetection:
         if self.first_start == True:
             self.first_start = False
             self.dlg = GapDetectionDialog()
+
+        # Clearing combox before start
+        self.dlg.cbLayers.clear ()
+        self.layer_names.clear ()
+        
+        # 
+        for layer in QgsProject.instance().mapLayers().values():
+            self.layer_names.append(layer.name())
+            self.all_layers.append(layer)
+        
+        # Filling combox 1 
+        self.dlg.cbLayers.addItems(self.layer_names)
+
+        # Filling combox 2
+        self.dlg.cbLayers_2.addItems(self.layer_names)
 
         # show the dialog
         self.dlg.show()

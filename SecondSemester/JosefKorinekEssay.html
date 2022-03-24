@@ -1,0 +1,288 @@
+<!DOCTYPE html><html><head>
+      <title>PracticeEsay</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\St&#xE1;tnice\.vscode-oss\extensions\shd101wyy.markdown-preview-enhanced-0.6.1\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="ko%C5%99%C3%ADnek-a-tov%C3%A1rna-na-su%C5%A1enky">Ko&#x159;&#xED;nek a tov&#xE1;rna na su&#x161;enky</h1>
+
+<p>Po online domluv&#x11B; jsem vyrazil na soukromou prohl&#xED;dku podniku od&#x161;t&#x11B;pn&#xE9;ho z&#xE1;vodu firmy Mondelez v Lovosic&#xED;ch. V&#x16F;n&#x11B; linouc&#xED; se ze z&#xE1;vodu m&#x11B; ujistila, &#x17E;e jsem zde spr&#xE1;vn&#x11B;. B&#x11B;hem kr&#xE1;tk&#xE9;ho &#x10D;ek&#xE1;n&#xED; na recepci jsem si prohl&#xE9;dl archivn&#xED; fotografie tov&#xE1;rny. U vchodu jsem obdr&#x17E;el karti&#x10D;ku a sm&#x11B;&#x159;ovali jsme do kancel&#xE1;&#x159;e. Pohodln&#xE1; pohovka p&#x159;ed kancel&#xE1;&#x159;&#xED; nasm&#x11B;rovan&#xE1; ke krbu ve mn&#x11B; budila pocit jako bych &#x10D;ekal v p&#x159;&#xED;j&#xED;mac&#xED;m sal&#xF3;nku. N&#xE1;sledn&#x11B; jsem byl pozv&#xE1;n do kancel&#xE1;&#x159;e, v n&#xED;&#x17E; panovala velmi p&#x159;&#xED;jemn&#xE1; atmosf&#xE9;ra. P&#x159;esn&#x11B; takov&#xE1;, ve kter&#xE9; chce &#x10D;lov&#x11B;k str&#xE1;vit t&#x159;etinu &#x17E;ivota. P&#x159;&#xED;jemn&#x11B; m&#x11B; p&#x159;ekvapilo, &#x17E;e m&#x11B;li boty m&#xE9; velikosti. Je&#x161;t&#x11B; jeden podpis, ne&#x17E; jsem se nasunul do ochrann&#xE9;ho pl&#xE1;&#x161;t&#x11B; a byl jsem p&#x159;ipraven na exkurzi.</p>
+<p>Line manager, pan in&#x17E;en&#xFD;r Mat&#x11B;j Vacek m&#x11B; vedl k prvn&#xED; zast&#xE1;vce, a to k um&#xFD;v&#xE1;rn&#x11B;. Cestou jsem se dozv&#x11B;d&#x11B;l stru&#x10D;nou historii firmy. S d&#x16F;kladn&#x11B; o&#x10D;ist&#x11B;n&#xFD;mi botami jsme se vydali sm&#x11B;rem k rozva&#x17E;ovn&#x11B;. Zde se ov&#x11B;&#x159;en&#xE9; p&#x159;&#xED;sady jako nap&#x159;. hrozinky zv&#xE1;&#x17E;&#xED; a p&#x159;iprav&#xED; na cestu do tov&#xE1;rny. Zam&#x11B;stnanci si zde d&#xE1;vaj&#xED; obzvl&#xE1;&#x161;t&#x11B; z&#xE1;le&#x17E;et, aby nedo&#x161;lo ke kontaminaci sm&#x11B;s&#xED; ciz&#xED;mi p&#x159;edm&#x11B;ty. S pokra&#x10D;uj&#xED;c&#xED;m v&#xFD;kladem doch&#xE1;z&#xED;me k dal&#x161;&#xED;m dve&#x159;&#xED;m.</p>
+<p>Nez&#xE1;visl&#xFD; pozorovatel by mohl sledovat, jak se mi rozz&#xE1;&#x159;ily o&#x10D;i, kdy&#x17E; jsem poprv&#xE9; uvid&#x11B;l vnit&#x159;ek tov&#xE1;rny. Kontinu&#xE1;ln&#xED; proud m&#xE1;slov&#xFD;ch su&#x161;enek BeBe na b&#xED;l&#xE9;m b&#x11B;&#x17E;&#xED;c&#xED;m p&#xE1;su je opravdov&#xFD;m d&#xED;lem techniky. Na prvn&#xED; pohled mi bylo jasn&#xE9;, &#x17E;e toto je nejvo&#x148;av&#x11B;j&#x161;&#xED; a nej&#x10D;ist&#x161;&#xED; tov&#xE1;rna ze v&#x161;ech, kter&#xE9; jsem dosud nav&#x161;t&#xED;vil. Pokra&#x10D;ujeme po schodech dol&#x16F; k m&#xED;stu, kde se zad&#x11B;l&#xE1;v&#xE1; t&#x11B;sto na su&#x161;enky. I zde kladou velk&#xFD; d&#x16F;raz na &#x10D;istotu a preciznost. Cel&#xFD; proces m&#xED;ch&#xE1;n&#xED; t&#x11B;sta je mi v&#x161;ak utajen, proto&#x17E;e nen&#xED; vid&#x11B;t. A tak jedin&#xE9;, co vid&#xED;m jsou krusty rozpe&#x10D;en&#xE9;ho t&#x11B;sta sm&#x11B;&#x159;uj&#xED;c&#xED; k velk&#xFD;m v&#xE1;lc&#x16F;m, kter&#xE9; t&#x11B;stu vtla&#x10D;uj&#xED; nezam&#x11B;nitelnou podobu su&#x161;enek BeBe.</p>
+<p>Od su&#x161;enek se prozat&#xED;m p&#x159;esouv&#xE1;me k oplatk&#xE1;m. Konkr&#xE9;tn&#x11B; k &#x10D;&#xE1;sti, kde se oplatky vrstv&#xED; na sebe. Trasa oplatek je vedena jak&#xFD;msi obloukem, pod kter&#xFD;m m&#x16F;&#x17E;e person&#xE1;l voln&#x11B; proch&#xE1;zet. Tato pomysln&#xE1; br&#xE1;na je dal&#x161;&#xED;m d&#x16F;kazem o d&#x16F;myslnosti cel&#xE9; tov&#xE1;rny. Trasy su&#x161;enek jsou kolem dokola a v&#x161;e d&#xE1;v&#xE1; sv&#x16F;j smysl, zde se prostorem nepl&#xFD;tv&#xE1;. Kdy&#x17E; proch&#xE1;z&#xED;me kolem technik&#x16F;, m&#xE1;m mo&#x17E;nost vid&#x11B;t otev&#x159;en&#xFD; rozvad&#x11B;&#x10D; a v&#x161;echny jeho vnit&#x159;nosti. Automatizace cel&#xE9;ho procesu je enormn&#xED;.</p>
+<p>Proch&#xE1;z&#xED;me tov&#xE1;rnou od pern&#xED;&#x10D;k&#x16F; ke krekr&#x16F;m, od t&#x11B;sta k balen&#xED;. P&#x159;i dal&#x161;&#xED; zast&#xE1;vce jsem obezn&#xE1;men s obsahem n&#xE1;st&#x11B;nky. Na n&#xED; je vid&#x11B;t, &#x17E;e firma klade nejenom na bezpe&#x10D;nost jej&#xED;ch produkt&#x16F;, ale i jej&#xED;ch zam&#x11B;stnanc&#x16F;. A&#x10D;koliv firma produkuje k&#x159;ehk&#xE9; su&#x161;enky, mohutn&#xE9; stroje zde pracuj&#xED; enormn&#xED; rychlost&#xED;, a tak jsem pou&#x10D;en, jak se zde p&#x159;edch&#xE1;z&#xED; nebezpe&#x10D;n&#xFD;m situac&#xED;m.</p>
+<p>Kdy&#x17E; proch&#xE1;z&#xED;me kolem balic&#xED; linky na pern&#xED;&#x10D;ky dozv&#xED;d&#xE1;m se, &#x17E;e ne v&#x161;e je automatizovan&#xE9; na maximum. Zde zam&#x11B;stnankyn&#x11B; ru&#x10D;n&#x11B; p&#x159;end&#xE1;vaj&#xED; ji&#x17E; zabalen&#xE9; pern&#xED;&#x10D;ky do z&#xE1;sobn&#xED;ku stroje, kter&#xFD; je strk&#xE1; do krabic. Dan&#xE1; operace nen&#xED; na tolik n&#xE1;ro&#x10D;n&#xE1;, aby ji stroje nezvl&#xE1;dly. Robot typu Pick and Place Delta vybaven&#xFD; kamerou by tuto pr&#xE1;ci zvl&#xE1;dl. Alternativn&#xED;m &#x159;e&#x161;en&#xED;m by mohlo b&#xFD;t i vhodn&#xE9; vyu&#x17E;it&#xED; skluz&#x16F; s p&#x159;ep&#xE1;&#x17E;kami. Nicm&#xE9;n&#x11B; zam&#x11B;stnance lze pova&#x17E;ovat za posledn&#xED; &#x10D;l&#xE1;nek kontroly p&#x159;ed t&#xED;m, ne&#x17E; dojde k zabalen&#xED; zbo&#x17E;&#xED; do krabic.</p>
+<p>Moji pozornost tak&#xE9; upoutala balic&#xED; linka na krekry TUC, u n&#xED;&#x17E; vy&#x161;lo najevo, &#x17E;e ani stroje nejsou v&#x161;emocn&#xE9; a bezchybn&#xE9;. Stroj n&#x11B;kter&#xE1; balen&#xED; &#x161;patn&#x11B; zabalil a aby nedo&#x161;lo k doru&#x10D;en&#xED; zmetku z&#xE1;kazn&#xED;kovi tato balen&#xED; vyhazoval mimo dopravn&#xED;kov&#xFD; p&#xE1;s. Av&#x161;ak ne v&#x161;echna balen&#xED; byla na vyhozen&#xED;. Na&#x161;t&#x11B;st&#xED; ve firm&#x11B; z&#x16F;st&#xE1;vaj&#xED; pr&#xE1;v&#x11B; zam&#x11B;stnanci, kte&#x159;&#xED; mohou nepr&#xE1;vem vylou&#x10D;en&#xE1; balen&#xED; vr&#xE1;tit do ob&#x11B;hu. Pe&#x10D;livou prac&#xED; tak mohou sn&#xED;&#x17E;it naprosto zbyte&#x10D;nou ztr&#xE1;tu ve v&#xFD;rob&#x11B;. V&#x11B;&#x159;&#xED;m, &#x17E;e by bylo mo&#x17E;n&#xE9; odhalit p&#x159;&#xED;&#x10D;inu &#x161;patn&#xE9;ho zabalen&#xED;, prvn&#x11B; by v&#x161;ak bylo vhodn&#xE9; objektivn&#x11B; zjistit, zda nen&#xED; jejich mno&#x17E;stv&#xED; zanedbateln&#xE9;.</p>
+<p>Na&#x161;&#xED; posledn&#xED; zast&#xE1;vkou se st&#xE1;v&#xE1; bali&#x10D;ka na su&#x161;enky BeBe. Zde se nach&#xE1;z&#xED; dal&#x161;&#xED; m&#xED;sto, kde doch&#xE1;z&#xED; k pl&#xFD;tv&#xE1;n&#xED; lidsk&#xFD;ch zdroj&#x16F;. Zam&#x11B;stnankyn&#x11B; zde mus&#xED; v&#x161;echny su&#x161;enky ru&#x10D;n&#x11B; srovnat. Pan Vacek, kter&#xFD; je mi pr&#x16F;vodcem dod&#xE1;v&#xE1;, &#x17E;e jsou zde p&#x159;edev&#x161;&#xED;m proto aby v p&#x159;&#xED;pad&#x11B; v&#xFD;padku bali&#x10D;ky rovnaly su&#x161;enky do p&#x159;ihr&#xE1;dek, ze kter&#xFD;ch jsou n&#xE1;sledn&#x11B; p&#x159;i op&#x11B;tovn&#xE9;m spu&#x161;t&#x11B;n&#xED; ru&#x10D;n&#x11B; p&#x159;esunuty zp&#x11B;t. Domn&#xED;v&#xE1;m se, &#x17E;e by se dal cel&#xFD; proces zautomatizovat vybaven&#xED; linky automatick&#xFD;m z&#xE1;sobn&#xED;kem tak, aby v tomto krizov&#xE9;m p&#x159;&#xED;pad&#x11B; m&#x11B;la linka mo&#x17E;nost odkl&#xE1;dat nezastaviteln&#xE9; su&#x161;enky pr&#xE1;v&#x11B; tam.</p>
+<p>P&#x159;ich&#xE1;z&#xED;me do kancel&#xE1;&#x159;e, kde jsem nechal sv&#xE9; v&#x11B;ci. P&#x159;i p&#x159;ezouv&#xE1;n&#xED; domlouv&#xE1;me detaily dal&#x161;&#xED;ho postupu pro zah&#xE1;jen&#xED; p&#x159;&#xED;padn&#xE9; spolupr&#xE1;ce. Je&#x161;t&#x11B; vr&#xE1;tit boty a u&#x17E; se lou&#x10D;&#xED;m na recepci. P&#x159;es respir&#xE1;tor nen&#xED; vid&#x11B;t, jak&#xFD; &#xFA;sm&#x11B;v mi vykouzlila tato prohl&#xED;dka. Ihned m&#x11B; napadlo p&#x159;irovn&#xE1;n&#xED; s Karl&#xED;kem a tov&#xE1;rnou na &#x10D;okol&#xE1;du. P&#x159;&#xED;jemn&#xE1; v&#x16F;n&#x11B; m&#x11B; doprov&#xE1;zela a&#x17E; na n&#xE1;dra&#x17E;&#xED;. P&#x159;i &#x10D;ek&#xE1;ni na vlak jsem v automatu spat&#x159;il balen&#xED; su&#x161;enek BeBe, a uv&#x11B;domil jsem si, &#x17E;e nyn&#xED; se na n&#x11B; d&#xED;v&#xE1;m jinak, vid&#xED;m toti&#x17E; cel&#xFD; proces, kter&#xFD; za nimi stoj&#xED;. Poctiv&#xE1; pr&#xE1;ce a poctiv&#xE9; suroviny je to co nab&#xED;z&#xED; firma Mondelez.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
