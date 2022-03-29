@@ -251,6 +251,9 @@ y:= NOT ($x_1$ AND NOT $x_2$)OR($x_1$)
     - Jak měřící clonka je předepsaná destička silná 1mm
 #### Magnetiké senzory
 - měření změny magnetického pole
+- Dva typy
+    - halova sonda 
+    - jazýčkové relé
 #### Kapacitní snímače
 - C=$\epsilon_0*\epsilon*\frac S d$
 - Pracují jako indukční senzory
@@ -258,6 +261,7 @@ y:= NOT ($x_1$ AND NOT $x_2$)OR($x_1$)
 - Dají se s nimi detekovat kovové i nekovové materiály
 - Rušivé vlivy
     - Hlavní zdroje ruení jsou elektromagnetická střídavá pole
-    
+
 #### Optické
+
 #### Ultrazvukové

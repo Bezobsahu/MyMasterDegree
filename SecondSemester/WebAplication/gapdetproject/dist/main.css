@@ -1,0 +1,140 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.header {
+  font-size: 42px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -145px;
+  pointer-events: none;
+}
+
+.headerBackground {
+  height: 145px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #b2b4a2), to(#54f346));
+  background: linear-gradient(90deg, #b2b4a2 50%, #54f346);
+}
+
+.header__nameOfProject {
+  margin-left: -280px;
+  margin-top: 84px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+  pointer-events: all;
+}
+
+.header__logo {
+  margin-left: 20px;
+  margin-top: -21px;
+  background-image: url("img/logo.gif");
+  min-width: 500px;
+  height: 220px;
+  width: 500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.header__loginStatus {
+  margin-top: 84px;
+  margin-left: 30vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  cursor: pointer;
+  color: black;
+  pointer-events: all;
+  text-decoration: none;
+}
+
+.header__emptySpace {
+  color: black;
+  min-height: 4px;
+}
+
+.forms {
+  padding: 21px;
+  font-size: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #b2b4a2;
+  height: auto;
+  width: 200px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button {
+  background-color: rgba(0, 255, 0, 0.767);
+  padding: 7%;
+}

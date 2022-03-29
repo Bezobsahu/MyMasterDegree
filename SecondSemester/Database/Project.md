@@ -9,7 +9,7 @@ class person {
     + surname
     + username
     + institution
-    # pasword
+    - pasword
 }
 person <|- client
 person <|- employee

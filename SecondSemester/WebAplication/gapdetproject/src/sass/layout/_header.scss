@@ -1,0 +1,88 @@
+
+.header{
+
+   
+    font-size: 42px;
+    position: fixed;
+    left: 0;
+    right: 0;
+   
+    display: flex;
+   
+    margin-top: -$topMarginOfHeader;
+    ;
+    pointer-events: none;
+    
+}
+
+.headerBackground{
+    height: $topMarginOfHeader;
+    background: linear-gradient(90deg, $secondaryColour 50%, $primaryColour );
+
+    
+}
+
+.header__nameOfProject {   
+
+    
+    margin-left: $leftMarginOfHeaderText;
+    margin-top: $topMarginOfHeaderText;
+    
+    
+    height: fit-content;
+    
+    min-width: fit-content;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    
+
+    pointer-events: all;
+    
+ 
+}
+
+.header__logo {
+    margin-left: $leftMarginOfHeaderLogo;
+   
+    margin-top: $toptMarginOfHeaderLogo;
+    
+
+    background-image: url('img/logo.gif');
+
+    min-width:500px;
+    height: 220px;
+    width: 500px ;
+    background-size:     contain;     
+    background-repeat:   no-repeat;
+    
+    
+    
+    
+   
+    
+   
+
+   
+    
+}
+
+.header__loginStatus {
+ 
+    margin-top: $topMarginOfHeaderText;
+    margin-left: 30vw;
+    
+    
+    height: fit-content;
+    cursor: pointer;
+    color: black;
+    pointer-events: all;
+    text-decoration: none;
+    
+}
+
+.header__emptySpace {
+    color: black;
+    min-height: 4px;
+    
+}
