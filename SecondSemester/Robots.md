@@ -265,3 +265,5 @@ y:= NOT ($x_1$ AND NOT $x_2$)OR($x_1$)
 #### Optické
 
 #### Ultrazvukové
+
+#### Tenzometry

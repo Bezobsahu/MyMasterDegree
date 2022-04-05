@@ -13,7 +13,7 @@
 
             <header class="header">
           
-                <div class="header__logo"  alt="logo"> </div>
+                <hdrimg class="header__logo"  alt="logo"> </hdrimg>
 
                 <a class="header__nameOfProject" href="about.php" >
                 Gap detection project
@@ -34,5 +34,7 @@
             </div>
     
 </body>
+
+<script src="dist/js/layout/header.js"></script>
 
 </html>

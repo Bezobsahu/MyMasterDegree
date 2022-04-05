@@ -66,8 +66,8 @@ table {
 
 .headerBackground {
   height: 145px;
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #b2b4a2), to(#54f346));
-  background: linear-gradient(90deg, #b2b4a2 50%, #54f346);
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #b2b4a2), to(#46f380));
+  background: linear-gradient(90deg, #b2b4a2 50%, #46f380);
 }
 
 .header__nameOfProject {
@@ -88,12 +88,17 @@ table {
 .header__logo {
   margin-left: 20px;
   margin-top: -21px;
-  background-image: url("img/logo.gif");
+  background-image: url("img/logo-static.gif");
   min-width: 500px;
   height: 220px;
   width: 500px;
   background-size: contain;
   background-repeat: no-repeat;
+  pointer-events: all;
+}
+
+.header__logo:hover {
+  background-image: url("img/logo.gif");
 }
 
 .header__loginStatus {
@@ -135,6 +140,7 @@ table {
 }
 
 .button {
-  background-color: rgba(0, 255, 0, 0.767);
+  background-color: rgba(255, 0, 149, 0.404);
   padding: 7%;
+  cursor: pointer;
 }

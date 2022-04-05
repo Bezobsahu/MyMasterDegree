@@ -4,15 +4,15 @@ Navrhovaná databáze by měla přispět k lepší organizaci souborů dat nasb�
 
 ```plantUML
 
-class person {
+class user {
     + name
     + surname
     + username
     + institution
     - pasword
 }
-person <|- client
-person <|- employee
+user <|- client
+user <|- employee
 
     class client {
         createorder ()

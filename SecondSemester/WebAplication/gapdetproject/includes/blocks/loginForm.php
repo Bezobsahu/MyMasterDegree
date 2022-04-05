@@ -1,6 +1,4 @@
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,22 +8,22 @@
     <title>Login Form</title>
 </head>
 <body>
-<div class="forms">
+<form action="includes/comands/login.php" method="POST" class="forms">
 
 
         Uživatelské jméno
-        <input type="text"><br>
+        <input name="userName" type="text"><br>
         Heslo
-        <input type="text">
+        <input name="password" type="text">
         <br>
-        <div class="button">
-        Přihlásit
-        </div>
+        <input class="button" value= "Přihlásit" type="submit">
+        
+        </input>
 
     <br>
     
-    <div><a href="#">Registrace</a></div>
+    <div><a href="registration.php">Registrace</a></div>
 
-</div>
+</form>
 </body>
 </html>

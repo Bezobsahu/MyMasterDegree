@@ -74,3 +74,26 @@ select $\lambda $ )
 
 4. Normální forma
     - pracuje se s nezávislostí
+
+<br>
+
+##Relační alegebra
+**vyber jména všech doktorů, kteří léčili chřipku**
+
+A $\leftarrow$ join (Doktoři, Vyšetření, ($\lambda$d $\lambda$v | d.id=v.doktor))
+
+A $\leftarrow$ 
+
+
+
+SELECT d.jméno d.příjmení
+FROM Doktoři d, Vyšetření v
+Where (v diagnoza="chřipka") AND (d.id=v.doktor)
+
+
+SELECT d.jméno d.příjmení
+FROM Doktoři d
+WHERE p.id IN 
+        (SELECT v doctor
+        FORM Pacienti p
+        WHERE p.adresa = "Nerudova 23")

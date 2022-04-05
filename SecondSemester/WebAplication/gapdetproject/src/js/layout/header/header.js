@@ -1,6 +1,11 @@
 
-
 /*
+$(document).ready(function($) {
+ console.warn('Document is ready!');
+ const img = document.querySelector('hdrimg')
+ img.style.background-color= black;
+});
+
 
 class Header extends HTMLElement {
     constructor() {
