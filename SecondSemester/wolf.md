@@ -115,3 +115,14 @@ Tvarování->
 AkčníOrgán-> ŘízenýObjekt
 }
 ```
+
+
+Číslicový regulátor určuje jednotlivé akční veličiny u(k) výpočtem z posloupnosti získaných vzorků y(k) a w(k).
+
+**Vstup - regulační odchylka:**
+
+$e(k)=w(k)-y(k)$
+
+**PID regulátor:**
+
+$u(t)=u(0) +[e(t)+\frac 1{T_I} \int^1 _2  ] $
