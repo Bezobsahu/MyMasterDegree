@@ -9,15 +9,28 @@
 <body>
 <?php
 
-$he = 'Bob';
-$she = 'Alice';
+function create_anchor(
+    $text,
+    $href = '#',
+    $title = '',
+    $target = '_self'
+)
+{
+    $href = $href ? sprintf('href="%s"', $href) : '';
+    $title = $title ? sprintf('title="%s"', $title) : '';
+    $target = $target ? sprintf('target="%s"', $target) : '';
 
-$text = <<<TEXT
-$he said "PHP is awesome".
-"Of course" $she agreed.
-TEXT;
+    return "<a $href $title $target>$text</a>";
+}
 
-echo $text;
+
+$link = create_anchor(
+    'PHP Tutorial', 
+    'https://www.phptutorial.net/',
+    target: '_blank'
+);
+
+echo $link;
 
 ?>
 </body>

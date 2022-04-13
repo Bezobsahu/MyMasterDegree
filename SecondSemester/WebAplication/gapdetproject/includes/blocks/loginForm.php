@@ -12,7 +12,7 @@
 
 
         Uživatelské jméno
-        <input name="userName" type="text"><br>
+        <input name="userName" type="text" ><br>
         Heslo
         <input name="password" type="text">
         <br>

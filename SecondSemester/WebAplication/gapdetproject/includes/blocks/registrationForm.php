@@ -11,15 +11,15 @@
 
 
         Uživatelské jméno
-        <input name="userName" type="text">
+        <input name="userName" type="text" required>
         Jméno
         <input name="name" type="text">
         Příjmení
         <input name="surname" type="text">
         Email
-        <input name="email" type="text">
+        <input name="email" type="email" required>
         Heslo
-        <input name="password" type="text">
+        <input name="password" type="text" required; >
         <br>
         <input class="button" value= "Registrovat se" type="submit">
         
