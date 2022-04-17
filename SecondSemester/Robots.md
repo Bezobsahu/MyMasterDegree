@@ -269,3 +269,31 @@ y:= NOT ($x_1$ AND NOT $x_2$)OR($x_1$)
 #### Tenzometry
 
 #### Kamerové systémy
+
+
+##### Požadavky na pracovní hlavice
+- Minimální hmotnost
+- Rozměry a prostorové uspořádání
+- Provozní bezpečnost
+- Provozní spolehlivost
+
+
+### Uchopové hlavice
+
+Dělení podle způsobu úchopu
+- Mechanické
+- Podtlakové
+- Magnetické
+**nebo**
+- Pasivní
+- Aktivní
+
+**Zakladní parametry úchopných hlavic**
+- Typ prvku (hlavice a její struktura)
+- Úchopná síla
+- Přesnost polohy objektu
+- Pracovní rozsah hlavice
+- Maximální příčný a podélný rozměr
+- Hmotnost
+- Druh energie pro napájení aktivních prvků
+- 
