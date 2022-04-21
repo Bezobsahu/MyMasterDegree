@@ -6,7 +6,7 @@
         <title><?= $title ?></title>
         <meta name="description" content="<?= $description ?>" />
         <meta name="keywords" content="<?= $keyWords?>" />
-        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <link rel="stylesheet" href="view/style.css" type="text/css"/>
     </head>
 
     <body>
