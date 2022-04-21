@@ -1,5 +1,8 @@
-<IfModule mod_rewrite.c>
-    RewriteEngine on
-    RewriteRule ^$ view/ [L]
-    RewriteRule (.*) view/$1 [L]
-</IfModule>
+Options -Indexes
+RewriteEngine On
+# RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule !\.(css|js|icon|zip|rar|png|jpg|gif|pdf)$ index.php [L]
+AddType application/x-httpd-php .php .phtml
