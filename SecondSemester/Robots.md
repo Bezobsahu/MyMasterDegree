@@ -297,3 +297,8 @@ Dělení podle způsobu úchopu
 - Hmotnost
 - Druh energie pro napájení aktivních prvků
 - 
+
+### Motory robotů
+**Požadavky**
+- Minimální hmotnost
+- Vhodné prostorové uspořádání

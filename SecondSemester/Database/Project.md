@@ -5,26 +5,31 @@ Navrhovaná databáze by měla přispět k lepší organizaci souborů dat nasb�
 ```plantUML
 
 class user {
+    + username
     + name
     + surname
-    + username
     + institution
-    - pasword
+    + email
+    - password
 }
-user <|- client
-user <|- employee
+user <|-- client
+user <|-- employee
 
     class client {
+    
         createorder ()
     }
 
     class employee {
-
+        +position
         uploadOrtofoto()
         uploadShapeFile()
     }
-client -> Order
-class Order {
+client <-- order
+class order {
+    + dateOfCreate
+    + estimatedPrice
+    + realPrice
     
 
 
@@ -34,19 +39,24 @@ class result {
     + relativePathToFile
     + author
 }
-
-result <|- ShapeFile
+result -> order
+result <|-- ShapeFile
 
 class ShapeFile {
     + usedSoftware
 }
-result <|- Ortofoto
+result <|-- ortofoto
 
-class Ortofoto{
+class ortofoto{
     + dateOfTaking
     + sunPosition
+
 }
 
 
+employee <-- result
 ```
+**heslo k databazy**
+jmeno:neo4j
+heslo:am295dnG4Fvvrqw9JLcrJs3Y5W-6v9LAwXscokdrQkE
 
