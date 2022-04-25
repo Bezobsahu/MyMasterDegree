@@ -24,7 +24,7 @@ class RouterControler extends Controler
         $this->data['description'] = $this->controler->headerN['description'];
         $this->data['keyWords'] = $this->controler->headerN['keyWords'];
 
-        $this->viewName='rozlozeni';
+        $this->viewName='layout';
       
         
        

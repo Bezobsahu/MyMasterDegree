@@ -5,6 +5,6 @@ class ErrorControler extends Controler
     {
         header("HTTP/1.0 404 Not Found");
         $this->headerN['title']='chybička 404';
-        $this->viewName='chyba';
+        $this->viewName='error';
     }
 }

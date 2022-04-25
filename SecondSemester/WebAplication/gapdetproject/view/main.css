@@ -60,19 +60,19 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: -145px;
+  margin-top: -105px;
   pointer-events: none;
 }
 
 .headerBackground {
-  height: 145px;
+  height: 105px;
   background: -webkit-gradient(linear, left top, right top, color-stop(50%, #b2b4a2), to(#46f380));
   background: linear-gradient(90deg, #b2b4a2 50%, #46f380);
 }
 
 .header__nameOfProject {
-  margin-left: -280px;
-  margin-top: 84px;
+  margin-left: -285px;
+  margin-top: 42px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -87,7 +87,7 @@ table {
 
 .header__logo {
   margin-left: 20px;
-  margin-top: -21px;
+  margin-top: -60px;
   background-image: url("img/logo-static.gif");
   min-width: 500px;
   height: 220px;
@@ -102,7 +102,7 @@ table {
 }
 
 .header__loginStatus {
-  margin-top: 84px;
+  margin-top: 42px;
   margin-left: 30vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -143,4 +143,29 @@ table {
   background-color: rgba(255, 0, 149, 0.404);
   padding: 7%;
   cursor: pointer;
+}
+
+h1 {
+  font-size: 84px;
+  text-align: center;
+  color: #444444;
+  text-shadow: 3px 3px 3px #aaaaaa;
+}
+
+p {
+  font-size: 42px;
+  text-align: center;
+}
+
+footer {
+  font-size: 11px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
+
+article {
+  text-shadow: 3px 3px 3px #aaaaaa;
 }
