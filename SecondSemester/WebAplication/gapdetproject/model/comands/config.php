@@ -1,6 +1,6 @@
 <?php
 
 $host = 'localhost';
-$db = 'gabDetDB';
+$dbname = 'gabDetDB';
 $user = 'projekt';
 $password = 'projekt';

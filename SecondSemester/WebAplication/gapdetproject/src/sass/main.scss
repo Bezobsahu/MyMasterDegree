@@ -1,26 +1,30 @@
+
+
 @import 'abstracts/variables';
 
+
+
 @import 'base/reset';
-
-
-@import 'layout/header';
-
-@import 'layout/forms';
-
-@import 'components/buttons';
-
-//frontend co mě už nebaví :D 
-
-
 h1 {
-    font-size: 84px;
+    font-size: 42px;
     text-align: center;
-    color: #444444;
-    text-shadow: 3px 3px 3px #aaaaaa;
+    
+    color: black;
+    text-shadow: 3px 3px 3px $secondaryColour;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, $secondaryColour 80%, $primaryColour );
+    
+}
+h2{
+    text-align: center;
+    color: black;
+    text-shadow: 3px 3px 3px $secondaryColour;
+    
 }
 
 p {
-    font-size: 42px;
+    font-size: 21px;
     text-align: center;
 }
 
@@ -34,6 +38,15 @@ footer {
     text-align: center;
 }
 
-article {
-    text-shadow: 3px 3px 3px #aaaaaa;
-}
+@import 'layout/header';
+
+@import 'layout/forms';
+
+@import 'components/buttons';
+@import 'components/article';
+
+//frontend co mě už nebaví :D 
+
+
+
+

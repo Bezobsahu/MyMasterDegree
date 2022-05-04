@@ -1,25 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
-</head>
-<body>
-<form action="includes/comands/register.php" method="post" class="forms">
+<h1>Registrační formulář</h1>
+<br>
+
+<p>Registrujte se odesláním formuláře níže.</p>
+
+<form  method="post" id="form-registration" class="forms">
 
 
         Uživatelské jméno
         <input name="userName" type="text" required>
         Jméno
-        <input name="name" type="text">
+        <input name="name" type="name">
         Příjmení
-        <input name="surname" type="text">
+        <input name="surname" type="name">
         Email
         <input name="email" type="email" required>
         Heslo
-        <input name="password" type="text" required; >
+        <input name="password" type="password" required; >
+        Heslo znovu
+        <input name="password2" type="password" required; >
         <br>
         <input class="button" value= "Registrovat se" type="submit">
         
@@ -27,8 +25,6 @@
 
     <br>
     
-    <div><a href="index.php">Přihlášení</a></div>
+    <div><a href="LoginForm">Přihlášení</a></div>
 
 </form>
-</body>
-</html>

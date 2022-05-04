@@ -9,7 +9,7 @@ class RouterControler extends Controler
         $parsedURL = $this->parseURL($parameters[0]);
 
         if (empty($parsedURL[0]))
-            $this->redirect('clanek/uvod');
+            $this->redirect('articles/o-nas');
             
         $controlerClass = $this->dashesToCamelsNotation(array_shift($parsedURL)) .'Controler';
         

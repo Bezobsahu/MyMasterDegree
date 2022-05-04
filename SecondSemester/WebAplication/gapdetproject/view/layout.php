@@ -4,6 +4,7 @@
         <base href="/localhost" />
         <meta charset="UTF-8" />
         <title><?= $title ?></title>
+        <link rel="icon" type="imamge/x-icon" href="/view/img/favicon.ico">
         <meta name="description" content="<?= $description ?>" />
         <meta name="keywords" content="<?= $keyWords?>" />
         <link rel="stylesheet" href="view/main.css" type="text/css"/>

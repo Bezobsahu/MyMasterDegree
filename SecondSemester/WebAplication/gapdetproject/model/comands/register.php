@@ -1,8 +1,8 @@
 <?php
  // connect DB via PDO instance
- $pdo = require 'connect.php';
+ 
 
- $stmt = $pdo->prepare("INSERT INTO user (userName, name, surname, email, password) VALUES (:userName, :name, :surname, :email, :password)");
+ $stmt = $conection->prepare("INSERT INTO user (userName, name, surname, email, password) VALUES (:userName, :name, :surname, :email, :password)");
 
  $stmt->bindParam(':userName', $userName);
  $stmt->bindParam(':name', $name);

@@ -13,7 +13,7 @@
 
     <br>
     
-    <div><a href="registration.php">Registrace</a></div>
+    <div><a href="RegistrationForm">Registrace</a></div>
     <div><a href="test.php">Test</a></div>
 
 </form>

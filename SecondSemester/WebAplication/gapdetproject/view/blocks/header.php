@@ -6,11 +6,11 @@
           
                 <hdrimg class="header__logo"  alt="logo"> </hdrimg>
 
-                <a class="header__nameOfProject" href="about.php" >
+                <a class="header__nameOfProject" href="articles" >
                 Gap detection project
                 </a>
 
-                <a class="header__loginStatus" href="index.php">
+                <a class="header__loginStatus" href="registration-form">
                 You are not logged in.
                 </a>
                 
