@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Client.xsd" generated="2022-05-12T09:51:22">
+<Client>
+<ID>10</ID>
+<username>korke</username>
+</Client>
+<Client>
+<ID>11</ID>
+<username>carek</username>
+<totalSum>2142</totalSum>
+</Client>
+<Client>
+<ID>12</ID>
+<totalSum>123</totalSum>
+</Client>
+<Client>
+<ID>13</ID>
+</Client>
+</dataroot>

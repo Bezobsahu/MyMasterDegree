@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1653325692 source:c:\users\státnice\mymasterdegree\secondsemester\cpp\creditproject\main.cpp
+	<iostream>
+	<string>
+	<stdio.h>
+	<windows.h>
+	<conio.h>
+
