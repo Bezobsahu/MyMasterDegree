@@ -7,16 +7,20 @@ class ThreadsControler extends Controler
         
         $threadManager = new ThreadManager ();
        
+       
         
         if(!empty($parameters[0]))
         {
            
+
             $thread = $threadManager->getThreadByIdWithAuthor($parameters[0]);
                 if (!$thread){
                     $this->redirect('error');
                     echo "hi there";}
-                
-            
+
+            $commentmanager = new CommentManager ();    
+            $comments = $commentmanager->getAllByThreadWithAuthors("5");
+
             $this->headerN=array(
                 'title' => $thread['name'],
                 'keyWords' => "some thread",
@@ -25,6 +29,7 @@ class ThreadsControler extends Controler
             $this->data['name'] = $thread['name'];
             $this->data['author']= $thread['username'];
             $this->data['content']= $thread['content'];
+            $this->data['comments']=$comments;
 
                 
             
