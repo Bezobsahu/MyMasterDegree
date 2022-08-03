@@ -78,7 +78,7 @@ Jdu se zabýt
     - manipulátory a roboty zpravidla bez zpěté vazby, kdy veškeré poruchy či změny 
 - První generace
     - roboty s jadnoduchou zpětnou vazbou, schopné přepínáníé několika
-- Druhá ragulace
+- Druhá generace
     - roboty se schopností optimalizace tj. schopností vybírat z pře
 - Třetí generace
 - Čtvrtá generace

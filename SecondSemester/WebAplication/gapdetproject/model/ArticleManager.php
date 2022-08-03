@@ -7,7 +7,7 @@ class ArticleManager
         return Db::queryOne ('
         SELECT `articles_id`, `title`, `content`, `url`, `description`, `keyWords`
         FROM `articles`
-        WHERE `url` = ?
+        WHERE `url` = ?         
     ', array($url));
     }
 
