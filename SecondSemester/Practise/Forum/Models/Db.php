@@ -11,7 +11,8 @@ class Db {
     public static function connect($host, $user, $password, $dbname ){
         if (!isset(self::$conection)){
             self::$conection = @new PDO(
-                "mysql:host=$host;dbname=$dbname",
+                "mysql:host=$host;
+                dbname=$dbname",
                 $user,
                 $password,
                 self::$setting

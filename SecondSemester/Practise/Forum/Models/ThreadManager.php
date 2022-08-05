@@ -20,6 +20,7 @@ class ThreadManager
             FROM `thread`
             INNER JOIN user ON thread.user_id=user.id
             WHERE thread.id = ?
+            
             ', array($id)
 
         );
