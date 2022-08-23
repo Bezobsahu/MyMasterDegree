@@ -4,12 +4,12 @@
     <tr>
         <td>
             <br>
-            <h2><a href="threads/<?= $thread['id']?>"><?= $thread['name'] ?></a></h2>
-            autor:<a href="user/id_ <?= $thread['user_id']?> "> <?= $thread['username']?></a>
+            <h2><a href="threads/<?= $thread->getId()?>"><?= $thread->getName() ?></a></h2>
+            autor:<a href="user/<?= $thread->getUser_id()?> "> <?= $thread->getAuthorUsername()?></a>
             <br>
             <br>
            
-            <?= $thread['content'] ?>
+            <?= $thread->getContent() ?>
             
         </td>
         

@@ -2,18 +2,31 @@
 
 class ThreadManager
 {
-    public function getThreadById ($id)
+    public function getById ($id): ?Threados
     {
-        return Db::queryOne('
-            SELECT `name`, `content`, `user_id`
+        
+        $tread = Db::queryOne('
+            SELECT `id`, `user_id`, `content`, `date`, `name`, `selection` 
             FROM `thread`
             WHERE `id` = ?
             ', array($id)
 
         );
+
+       
+            return new Threados(
+                $tread['id'],
+                $tread['user_id'],
+                $tread['content'],
+                $tread['date'],
+                $tread['name'],
+                $tread['selection'],
+            );
+
+       
     }
    
-    public function getThreadByIdWithAuthor($id)
+    public function getThreadByIdWithAuthor($id): ?Threados
     {
         return Db::queryOne('
             SELECT thread.id, thread.name, thread.content, thread.user_id, user.username
@@ -47,15 +60,30 @@ class ThreadManager
 
     }
 
-    public function getAllByDate ()
+    public function getAllDateOrder (): ?Array
     {
         
-       return Db::queryAll('
-            SELECT `id`, `name`, `content`, `user_id`
+       $threadsQ = Db::queryAll('
+            SELECT `id`, `user_id`, `content`, `date`, `name`, `selection`
             FROM `thread`
             ORDER BY `date` DESC'
          );
-         
+        
+        $threads=[];
+
+        foreach($threadsQ as $thread)
+        {
+            $threads[] = new Threados(
+            $thread['id'],
+            $thread['user_id'],
+            $thread['content'],
+            $thread['date'],
+            $thread['name'],
+            $thread['selection'],
+            );
+        }
+        
+        return $threads;
     }
 
     public function getAllByDateWithAuthors ()

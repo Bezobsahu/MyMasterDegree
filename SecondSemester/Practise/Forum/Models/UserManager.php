@@ -1,17 +1,33 @@
 <?php 
 class UserManager 
 {
-    public function getUserWithId($id)
+    public function getUserWithId($id): ?User
     {
-        return Db::queryOne('
-            SELECT `Username`, `name`, `email`
-            FROM User
-            WHERE `id`=?' ,
-            array($id)
-    );
+        $user =
+        Db::queryOne('
+        SELECT `id`, `role_id`, `username`, `name`, `surname`, `email`, `password`, `birthdate`
+        FROM User
+        WHERE `id`=?' ,
+        array($id));
+        
+        return new User (
+            $user['id'],
+            $user['role_id'],
+            $user['username'],
+            $user['name'],
+            $user['surname'],
+            $user['email'],
+            $user['password'],
+            $user['birthdate'],
+        );
+
+        
     }
 
-    public function register(int $role,string $username,string $name, string $surname, string $email, string $password,  $birthdate)
+
+    
+
+    public function register(int $role, string $username, string $name, string $surname, string $email, string $password, string $birthdate)
     {
         $user=array("username"=>$username, 
                     "name"=>$name,
@@ -23,9 +39,7 @@ class UserManager
         Db::queryOne('
             INSERT INTO user(`username`, `name`, `surname`, `email`, `birthdate`, `password`, `role_id`)
             VALUES          (:username, :name, :surname, :email, :birthdate, :password, :role_id)
-        ',$user);
-        echo (var_dump($birthdate));
-    
+        ',$user); 
 
     }
 

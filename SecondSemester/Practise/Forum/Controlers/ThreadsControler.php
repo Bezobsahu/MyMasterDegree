@@ -6,6 +6,7 @@ class ThreadsControler extends Controler
     {
         
         $threadManager = new ThreadManager ();
+        $userManager = new UserManager();
        
        
         
@@ -13,22 +14,26 @@ class ThreadsControler extends Controler
         {
            
 
-            $thread = $threadManager->getThreadByIdWithAuthor($parameters[0]);
+            $thread = $threadManager->getById($parameters[0]);
                 if (!$thread){
                     $this->redirect('error');
-                    echo "hi there";}
+                    }
+
+            $threadId = $thread->getId();
 
             $commentmanager = new CommentManager ();    
-            $comments = $commentmanager->getAllByThreadWithAuthors("5");
+            $comments = $commentmanager->getAllByThreadWithAuthors($threadId);
 
             $this->headerN=array(
-                'title' => $thread['name'],
+                'title' => $thread->getName(),
                 'keyWords' => "some thread",
                 'description' => "see content to know more");
 
-            $this->data['name'] = $thread['name'];
-            $this->data['author']= $thread['username'];
-            $this->data['content']= $thread['content'];
+            $user = $userManager->getUserWithId($thread->getUser_id());
+            
+            $this->data['name'] = $thread->getName();
+            $this->data['author']= $user->getUsername();
+            $this->data['content']= $thread->getContent();
             $this->data['comments']=$comments;
 
                 
@@ -37,7 +42,7 @@ class ThreadsControler extends Controler
         }
         else 
         {
-            $threads= $threadManager->getAllByDateWithAuthors();
+            $threads= $threadManager->getAllDateOrder();
             
             $this->data['threads']=$threads;
             
