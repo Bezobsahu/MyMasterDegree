@@ -16,10 +16,10 @@
             
             <br>
             
-            <?= $comment['content'] ?>
+            <?= $comment->getContent()?>
             
             <br>
-            autor:<a href= "user/id_<?= $comment['user_id']?>"> <?= $comment['username']?></a>
+            autor:<a href= "user/<?= $comment->getUser_id()?>"> <?= $comment->getAuthorUsername()?></a>
         </td>
         
     </tr>

@@ -22,8 +22,8 @@ class ThreadsControler extends Controler
             $threadId = $thread->getId();
 
             $commentmanager = new CommentManager ();    
-            $comments = $commentmanager->getAllByThreadWithAuthors($threadId);
-
+            $comments = $commentmanager->getAllByThread($threadId);
+            var_dump($threadId);
             $this->headerN=array(
                 'title' => $thread->getName(),
                 'keyWords' => "some thread",
@@ -40,6 +40,7 @@ class ThreadsControler extends Controler
             
             $this->viewName = 'thread';
         }
+
         else 
         {
             $threads= $threadManager->getAllDateOrder();

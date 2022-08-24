@@ -2,7 +2,7 @@
 
 class UserControler extends Controler
 {
-    public function process ($parameters)
+    public function process ($parameters):void
     {
        
         $userManager = new UserManager;
