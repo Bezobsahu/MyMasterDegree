@@ -1,5 +1,8 @@
 <?php
 
+session_start();
+$_SESSION['login'];
+
 mb_internal_encoding("UTF-8");//nastavení češtiny
 
 //vlastní autoloader
@@ -16,6 +19,9 @@ spl_autoload_register("autoloadFunction");
 //připojení k databázi
 
 Db::connect('localhost', 'projekt', 'projekt', 'forumlike');
+
+
+
 
 //směrovač
 $router = new RouterControler();

@@ -3,9 +3,11 @@ class RouterControler extends Controler
 {
 
     protected $controler;
+    
 
     public function process($parameters)
     {
+        
         $parsedURL = $this->parseURL($parameters[0]);
 
         if (empty($parsedURL[0]))

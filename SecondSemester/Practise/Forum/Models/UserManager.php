@@ -34,7 +34,7 @@ class UserManager
                     "surname"=>$surname,
                     "email"=>$email,
                     "birthdate"=> $birthdate,
-                    "password"=>password_hash($password, PASSWORD_BCRYPT), 
+                    "password"=>password_hash($password, PASSWORD_DEFAULT), 
                     "role_id"=>$role);
         Db::queryOne('
             INSERT INTO user(`username`, `name`, `surname`, `email`, `birthdate`, `password`, `role_id`)
@@ -51,6 +51,35 @@ class UserManager
             return false;
         
 
+
+    }
+
+    public function login (string $username,string $password)
+    {
+        $user =
+        Db::queryOne('
+        SELECT `id`,`password`
+        FROM User
+        WHERE `username`=?' ,
+        array($username));
+        $passIsSame = password_verify($password,$user['password']);
+        
+        if ($passIsSame == true) {  
+            $_SESSION['login'] = true; 
+            var_dump ($passIsSame);
+            $_SESSION['id'] = $user['id'];  
+            return true;  
+        } else {  
+            var_dump ($passIsSame);
+            return false;  
+
+        }  
+
+    }
+    
+    public function logout()
+    {
+        $_SESSION['login'] = false; 
 
     }
 

@@ -25,8 +25,7 @@ class RegistrationFormControler extends Controler
             $surname = $_POST["surname"];
             $email = $_POST["email"];
             $birthdate=$_POST["birthdate"];
-            $birthdate= date('Y-m-d', strtotime($birthdate));;
-            echo var_dump($_POST["birthdate"]);
+           
             
             $userManager->register('2',$username, $name, $surname, $email, $password, $birthdate);
             echo '<script>alert("Uživatel registrován :)")</script>';

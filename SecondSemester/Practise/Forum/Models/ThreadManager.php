@@ -39,15 +39,28 @@ class ThreadManager
         );
     }
    
-    public function getAllFromSelection ($selection_id)
+    public function getAllFromSection ($selection_id)
     {
-        return Db::queryOne('
-            SELECT `name`, `content`, `user_id`
+        $threadsQ = Db::queryOne('
+            SELECT `id`, `user_id`, `content`, `date`, `name`, `selection`
             FROM `thread`
             WHERE `selection` = ?
             ', array($selection_id)
         );
 
+        foreach($threadsQ as $thread)
+        {
+            $threads[] = new Threados(
+            $thread['id'],
+            $thread['user_id'],
+            $thread['content'],
+            $thread['date'],
+            $thread['name'],
+            $thread['selection'],
+            );
+        }
+        
+        return $threads;
     }
 
     public function getAll ()
