@@ -9,15 +9,20 @@ class SectionsControler extends Controler
 
     if(!empty($paramenters[0]))
     {
+        
         $section = $sectionManager->getById($paramenters[0]);
             if (!$section)
             {
                 $this->redirect('error');
             }
+       
+        $sections = $sectionManager->getAllFromSection($paramenters[0]);
+
         
-        $threadManager = new ThreadManager;
-        $threadManager->getAllFromSection($section->getId());
-         
+        $threads = $threadManager->getAllFromSection($section->getId());
+        $this->data['threads'] = $threads;
+        $this->data['sections'] = $sections;
+        $this->viewName = 'sections';
     }
     else
     {

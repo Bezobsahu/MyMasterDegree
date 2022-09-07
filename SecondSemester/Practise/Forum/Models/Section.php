@@ -57,4 +57,10 @@ class Section
 	function getDescription(): string {
 		return $this->description;
 	}
+
+	function getAuthorUsername(): string {
+		$userManager = new UserManager;
+		$user = $userManager->getUserWithId($this->user_id);
+		return $user->getUsername();
+	}
 }

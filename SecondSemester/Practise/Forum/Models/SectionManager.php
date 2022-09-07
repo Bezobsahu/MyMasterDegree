@@ -4,45 +4,73 @@ class SectionManager
 {
     public function getAllNameOrder ()
     {
-        $selectionsQ = Db::queryAll('
-            SELECT `id`, `selection_id`, `user_id`, `name`, `desciption`
-            FROM `selection`
+        $sectionsQ = Db::queryAll('
+            SELECT `id`, `section_id`, `user_id`, `name`, `desciption`
+            FROM `section`
             ORDER BY `name` DESC'
          );
         
-        $selections=[];
+        $sections=[];
 
-        foreach($selectionsQ as $selection)
+        foreach($sectionsQ as $section)
         {
-            $selections[] = new Section(
-            $selection['id'],
-            $selection['selection_id'],
-            $selection['user_id'],
-            $selection['name'],
-            $selection['desciption'],
+            $sections[] = new Section(
+            $section['id'],
+            $section['section_id'],
+            $section['user_id'],
+            $section['name'],
+            $section['desciption'],
             );
         }
         
-        return $selections;
+        return $sections;
+    }
+
+    public function getAllFromSection ($section_id)
+    {
+        $sectionsQ = Db::queryAll('
+            SELECT `id`, `section_id`, `user_id`, `name`, `desciption`
+            FROM `section`
+            WHERE `section_id` = ?
+            ORDER BY `name` DESC'
+            , array($section_id)
+         );
+        
+        $sections=[];
+
+        foreach($sectionsQ as $section)
+        {
+            $sections[] = new Section(
+            $section['id'],
+            $section['section_id'],
+            $section['user_id'],
+            $section['name'],
+            $section['desciption'],
+            );
+        }
+        
+        return $sections;
     }
 
     public function getById($id): ?Section
     {
-        $selection=Db::queryAll('
-        SELECT `id`, `selection_id`, `user_id`, `name`, `description`
-        FROM `selection`
+        
+        $section=Db::queryOne('
+        SELECT `id`, `section_id`, `user_id`, `name`, `desciption`
+        FROM `section`
         WHERE `id` = ?
         ', array($id)
-
+       
      );
+    
 
 
-        return new Selection(
-            $selection['id'],
-            $selection['selection_id'],
-            $selection['user_id'],
-            $selection['name'],
-            $selection['description'],
+        return new Section(
+            $section['id'],
+            $section['section_id'],
+            $section['user_id'],
+            $section['name'],
+            $section['desciption'],
             );
     }
 

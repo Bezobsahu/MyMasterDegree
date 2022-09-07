@@ -6,7 +6,7 @@ class ThreadManager
     {
         
         $tread = Db::queryOne('
-            SELECT `id`, `user_id`, `content`, `date`, `name`, `selection` 
+            SELECT `id`, `user_id`, `content`, `date`, `name`, `section` 
             FROM `thread`
             WHERE `id` = ?
             ', array($id)
@@ -20,7 +20,7 @@ class ThreadManager
                 $tread['content'],
                 $tread['date'],
                 $tread['name'],
-                $tread['selection'],
+                $tread['section'],
             );
 
        
@@ -39,15 +39,15 @@ class ThreadManager
         );
     }
    
-    public function getAllFromSection ($selection_id)
+    public function getAllFromSection ($section_id)
     {
-        $threadsQ = Db::queryOne('
-            SELECT `id`, `user_id`, `content`, `date`, `name`, `selection`
+        $threadsQ = Db::queryAll('
+            SELECT `id`, `user_id`, `content`, `date`, `name`, `section`
             FROM `thread`
-            WHERE `selection` = ?
-            ', array($selection_id)
+            WHERE `section` = ?
+            ', array($section_id)
         );
-
+        
         foreach($threadsQ as $thread)
         {
             $threads[] = new Threados(
@@ -56,7 +56,7 @@ class ThreadManager
             $thread['content'],
             $thread['date'],
             $thread['name'],
-            $thread['selection'],
+            $thread['section'],
             );
         }
         
@@ -77,7 +77,7 @@ class ThreadManager
     {
         
        $threadsQ = Db::queryAll('
-            SELECT `id`, `user_id`, `content`, `date`, `name`, `selection`
+            SELECT `id`, `user_id`, `content`, `date`, `name`, `section`
             FROM `thread`
             ORDER BY `date` DESC'
          );
@@ -92,7 +92,7 @@ class ThreadManager
             $thread['content'],
             $thread['date'],
             $thread['name'],
-            $thread['selection'],
+            $thread['section'],
             );
         }
         
