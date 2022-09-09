@@ -2,12 +2,14 @@
 
 class SectionManager 
 {
-    public function getAllNameOrder ()
+    public function getAllRootNameOrder ()
     {
         $sectionsQ = Db::queryAll('
             SELECT `id`, `section_id`, `user_id`, `name`, `desciption`
             FROM `section`
-            ORDER BY `name` DESC'
+            WHERE `section_id` IS NULL
+            ORDER BY `name` DESC
+            '
          );
         
         $sections=[];

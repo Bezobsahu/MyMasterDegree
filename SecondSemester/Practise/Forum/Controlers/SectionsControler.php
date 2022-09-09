@@ -6,7 +6,7 @@ class SectionsControler extends Controler
 {
     $sectionManager = new SectionManager;
     $threadManager = new ThreadManager;
-
+   
     if(!empty($paramenters[0]))
     {
         
@@ -20,15 +20,21 @@ class SectionsControler extends Controler
 
         
         $threads = $threadManager->getAllFromSection($section->getId());
+        
+       
+            
         $this->data['threads'] = $threads;
         $this->data['sections'] = $sections;
         $this->viewName = 'sections';
     }
     else
     {
-        $sections = $sectionManager->getAllNameOrder();
+        $sections = $sectionManager->getAllRootNameOrder();
+        $threads=$threadManager->getEmpty();
+        $this->data['threads'] = $threads;
         $this->data['sections'] = $sections;
         $this->viewName = 'sections';
+        $threads;
     }
 }
 }

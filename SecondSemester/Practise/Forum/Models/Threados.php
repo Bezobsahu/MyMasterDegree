@@ -7,7 +7,7 @@ class Threados
     private string $content;
     private string $date;
     private string $name;
-    private int $selection;
+    private int $section;
 
     public function __construct (
        int $id,
@@ -15,7 +15,7 @@ class Threados
        string $content,
        string $date,
        string $name,
-       int $selection,
+       int $section,
     )
     {
       $this->id=$id;
@@ -23,7 +23,7 @@ class Threados
       $this->content=$content;
       $this->date=$date;
       $this->name=$name;
-      $this->selection=$selection;
+      $this->section=$section;
     }
     
 	/**
@@ -109,16 +109,16 @@ class Threados
 	/**
 	 * @return int
 	 */
-	function getSelection(): int {
-		return $this->selection;
+	function getSection(): int {
+		return $this->section;
 	}
 	
 	/**
-	 * @param int $selection 
+	 * @param int $section 
 	 * @return Thread
 	 */
-	function setSelection(int $selection): self {
-		$this->selection = $selection;
+	function setSelection(int $section): self {
+		$this->section = $section;
 		return $this;
 	}
 

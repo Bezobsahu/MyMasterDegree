@@ -47,20 +47,31 @@ class ThreadManager
             WHERE `section` = ?
             ', array($section_id)
         );
-        
-        foreach($threadsQ as $thread)
+        if (empty($threadsQ))
         {
-            $threads[] = new Threados(
-            $thread['id'],
-            $thread['user_id'],
-            $thread['content'],
-            $thread['date'],
-            $thread['name'],
-            $thread['section'],
-            );
+            $threadManager = new ThreadManager;
+            $threads[] = $threadManager->getById(42);
+            
+            return $threads;
+        }
+        else
+        {
+            foreach($threadsQ as $thread)
+            {
+                $threads[] = new Threados(
+                $thread['id'],
+                $thread['user_id'],
+                $thread['content'],
+                $thread['date'],
+                $thread['name'],
+                $thread['section'],
+                );
+            }
+            return $threads;
         }
         
-        return $threads;
+
+        
     }
 
     public function getAll ()
@@ -110,5 +121,16 @@ class ThreadManager
          );
          
     }
+    public function getEmpty()
+    {
+        return array(
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+        );
 
+    }
 }

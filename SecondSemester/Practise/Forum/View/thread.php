@@ -1,8 +1,10 @@
 
     <h1><?= $name ?></h1>
 
-
-<?= $author ?>
+    <?= $section->getName() ?>
+    <br>
+    <br>
+autor: <a href='user/<?= $author_id?>'><?= $author ?></a>
     
 <br>
 <br>
@@ -24,5 +26,6 @@
         
     </tr>
 <?php endforeach ?>
+
 
 

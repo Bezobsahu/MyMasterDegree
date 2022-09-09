@@ -7,7 +7,7 @@ class ThreadsControler extends Controler
         
         $threadManager = new ThreadManager ();
         $userManager = new UserManager();
-       
+        $sectionManager = new SectionManager();
        
         
         if(!empty($parameters[0]))
@@ -33,7 +33,9 @@ class ThreadsControler extends Controler
             
             $this->data['name'] = $thread->getName();
             $this->data['author']= $user->getUsername();
+            $this->data['author_id']= $user->getId();
             $this->data['content']= $thread->getContent();
+            $this->data['section']=$sectionManager->getById($thread->getSection());
             $this->data['comments']=$comments;
 
                 
