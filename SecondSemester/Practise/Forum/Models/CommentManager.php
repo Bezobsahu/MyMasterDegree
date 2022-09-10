@@ -42,4 +42,18 @@ class CommentManager
        
         return $comments;
     }
+
+    public function add(int $user_id, int $thread_id, string $content)
+    {
+        $comment=array("user_id"=>$user_id,
+                        "thread_id"=>$thread_id,
+                        "content"=>$content,
+                        "date"=>date("Y-m-d h:i:sa"),
+                        "modifed"=>"0");
+
+        Db::queryOne('
+            INSERT INTO comment(`user_id`, `thread_id`, `content`, `date`, `modifed`)
+            VALUES          (:user_id, :thread_id, :content, :date, :modifed)
+        ',$comment); 
+    }
 }

@@ -9,7 +9,17 @@ class ThreadsControler extends Controler
         $userManager = new UserManager();
         $sectionManager = new SectionManager();
        
-        
+
+        if (strtoupper($_SERVER['REQUEST_METHOD']) === 'POST' && $_SESSION["login"]=== true)
+        {
+            if ($_POST["comment-content"])
+            {
+            $commentManager = new CommentManager ();
+            $commentManager->add($_SESSION["id"],$parameters[0],$_POST["comment-content"]);}
+            
+
+        }
+
         if(!empty($parameters[0]))
         {
            
@@ -21,9 +31,9 @@ class ThreadsControler extends Controler
 
             $threadId = $thread->getId();
 
-            $commentmanager = new CommentManager ();    
-            $comments = $commentmanager->getAllByThread($threadId);
-            var_dump($threadId);
+            $commentManager = new CommentManager ();
+            $comments = $commentManager->getAllByThread($threadId);
+            
             $this->headerN=array(
                 'title' => $thread->getName(),
                 'keyWords' => "some thread",
@@ -41,6 +51,7 @@ class ThreadsControler extends Controler
                 
             
             $this->viewName = 'thread';
+        
         }
 
         else 

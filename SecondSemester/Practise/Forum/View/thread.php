@@ -27,5 +27,19 @@ autor: <a href='user/<?= $author_id?>'><?= $author ?></a>
     </tr>
 <?php endforeach ?>
 
+<form   method="post" id="form-comment" class="forms">
 
+
+        Váš komentář:
+        <input name="comment-content" type="text" >
+      
+       
+        <input class="button" value= "Komentovat" type="submit">
+        
+        </input>
+
+    <br>
+ 
+
+</form>
 

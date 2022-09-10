@@ -1,3 +1,5 @@
+<h1><?= $section?></h1>
+
 <?php foreach ($sections as $section) : ?>
     <tr>
         <td>
@@ -14,7 +16,24 @@
         
     </tr>
 <?php endforeach ?>
-<table style="Threads">
+
+<br>
+<br>
+<form  method="post" id="form-section" class="forms">
+Název nové sekce:
+        <input name="SectionName" type="text" required>
+
+Obsah sekce:
+        <input name="SectionDescription" type="text" >
+      
+       
+        <input class="button" name="SectionSub" value= "Přidat novou sekci" type="submit">
+        
+        </input>
+
+</form>
+
+
 <?php foreach ($threads as $thread) : ?>
     <tr>
         <td>
@@ -30,4 +49,22 @@
         
     </tr>
 <?php endforeach ?>
-</table>
+
+<form   method="post" id="form-thread" class="forms">
+<br>
+
+        Název nového vlákna:
+        <input name="threadName" type="text" required>
+        Obsah nového vlákna:
+
+        <input name="threadContent" type="text" required>
+      
+       
+        <input class="button" name= "threadSub" value= "Přidat vlákno" type="submit">
+        
+        </input>
+
+    <br>
+ 
+
+</form>

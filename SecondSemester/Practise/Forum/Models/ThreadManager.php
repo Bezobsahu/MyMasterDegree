@@ -133,4 +133,18 @@ class ThreadManager
         );
 
     }
+
+    public function add(int $user_id,string $content, string $name, int $section)
+    {
+        $thread=array("user_id"=>$user_id,
+                        "name"=>$name,
+                        "content"=>$content,
+                        "date"=>date("Y-m-d h:i:sa"),
+                        "section"=>$section);
+
+        Db::queryOne('
+            INSERT INTO thread(`user_id`, `name`, `content`, `date`, `section`)
+            VALUES          (:user_id, :name, :content, :date, :section)
+        ',$thread); 
+    }
 }
