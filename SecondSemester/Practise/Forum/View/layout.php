@@ -15,9 +15,9 @@
             <?php require('blocks/header.php') ?>
         </header>
 
-        <article>
+        
             <?php $this->controler->showView(); ?>
-        </article>
+        
 
         <footer>
             <?php require ('blocks/footer.php') ?>

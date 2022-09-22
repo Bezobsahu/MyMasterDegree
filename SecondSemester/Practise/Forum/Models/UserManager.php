@@ -80,7 +80,7 @@ class UserManager
     public function logout()
     {
         $_SESSION['login'] = false; 
-
+        $_SESSION['id'] ="0";
     }
 
     

@@ -8,13 +8,15 @@ class SectionsControler extends Controler
     $threadManager = new ThreadManager;
     $userManager = new UserManager;
 
-    if (strtoupper($_SERVER['REQUEST_METHOD']) === 'POST' && $_SESSION["login"]=== true && $userManager->getUserWithId($_SESSION["id"])->getRole_id() =="1")
+    if (strtoupper($_SERVER['REQUEST_METHOD']) === 'POST' && $_SESSION["login"]=== true )
         {
-           if(isset($_POST["SectionName"]) && isset($_POST["SectionSub"]))
-           {
-            
-           
+           if(isset($_POST["SectionName"]) && isset($_POST["SectionSub"])&& $userManager->getUserWithId($_SESSION["id"])->getRole_id() =="1")
+           {           
             $sectionManager->add($paramenters[0], $_SESSION["id"],$_POST["SectionName"],$_POST["SectionDescription"]);
+           }
+           elseif(isset($_POST["SectionName"]) && isset($_POST["SectionSub"])&& $userManager->getUserWithId($_SESSION["id"])->getRole_id() =="2")
+           {
+            echo '<script>alert("Přidávat sekce mohou jen admini pošlete žádost jim")</script>';
            }
             elseif(isset($_POST["threadContent"]) && isset($_POST["threadName"]) && isset($_POST["threadSub"]))
             {
@@ -22,9 +24,9 @@ class SectionsControler extends Controler
             }
         }
 
-    if (strtoupper($_SERVER['REQUEST_METHOD']) === 'POST' && $_SESSION["login"]=== true && $userManager->getUserWithId($_SESSION["id"])->getRole_id() =="2")
-    echo '<script>alert("Přidávat sekce mohou jen admini pošlete žádost jim")</script>';
-   
+    
+    if (strtoupper($_SERVER['REQUEST_METHOD']) === 'POST' && $_SESSION["login"]=== false)
+    echo '<script>alert("Přidávat příspěvky mohou jen přihlášení uživatelé")</script>';
     if(!empty($paramenters[0]))
     {
         
