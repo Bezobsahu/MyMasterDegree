@@ -15,43 +15,43 @@ class ThreadsControler extends Controler
         {
             if (isset($_POST["commentSub"]))
             {
-            $commentManager = new CommentManager ();
-            $commentManager->add($_SESSION["id"],$parameters[0],$_POST["comment-content"]);
+                $commentManager = new CommentManager ();
+                $commentManager->add($_SESSION["id"],$parameters[0],$_POST["comment-content"]);
             }
             elseif(isset($_POST["reactionSub"]))
             {
-                $a=$reactionManager->getAll();
-                $b=count($a);
-            for($i=1;$i<=$b;$i++)
-            {
-              
-                if (isset($_POST["reactionSub"][$i]))
+                $a = $reactionManager->getAll();
+                $b = count($a);
+                for($i=1;$i<=$b;$i++)
                 {
-                    $commentId=$_POST["reactionSub"][$i];
-                    $userToCommentReactingManager = new UserToCommentReactingManager;
-                    $userToCommentReacting=$userToCommentReactingManager->getByUserComment($_SESSION["id"],$commentId);
+                
+                    if (isset($_POST["reactionSub"][$i]))
+                    {
+                        $commentId=$_POST["reactionSub"][$i];
+                        $userToCommentReactingManager = new UserToCommentReactingManager;
+                        $userToCommentReacting=$userToCommentReactingManager->getByUserComment($_SESSION["id"],$commentId);
 
-                    if (is_null($userToCommentReacting))
-                    {
-                        $userToCommentReactingManager->add($_SESSION["id"],$commentId,$i);
-                   
-                    }
-                    elseif($userToCommentReactingManager->getByUserCommentReaction($_SESSION["id"],$commentId,$i))
-                    {
-                        $userToCommentReactingManager->delete($_SESSION["id"],$commentId);
-                     
-                       
-                    }
-                    else
-                    {
-                        $userToCommentReactingManager->delete($_SESSION["id"],$commentId,$i);
-                        $userToCommentReactingManager->add($_SESSION["id"],$commentId,$i);
-                       
-                    }
+                        if (is_null($userToCommentReacting))
+                        {
+                            $userToCommentReactingManager->add($_SESSION["id"],$commentId,$i);
                     
+                        }
+                        elseif($userToCommentReactingManager->getByUserCommentReaction($_SESSION["id"],$commentId,$i))
+                        {
+                            $userToCommentReactingManager->delete($_SESSION["id"],$commentId);
+                        
+                        
+                        }
+                        else
+                        {
+                            $userToCommentReactingManager->delete($_SESSION["id"],$commentId,$i);
+                            $userToCommentReactingManager->add($_SESSION["id"],$commentId,$i);
+                        
+                        }
+                        
 
+                    }
                 }
-            }
             }
             
 

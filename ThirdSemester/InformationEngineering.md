@@ -1,0 +1,1 @@
+systematický přístup k návrhu 
