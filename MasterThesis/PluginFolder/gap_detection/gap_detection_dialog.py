@@ -31,9 +31,7 @@ class GapDetectionDialog(QtWidgets.QDialog, FORM_CLASS):
         print('heloooooo')
         text = self.cbLayers.currentText
         print(text)
-        pointLayer.write = "nejake souradnice 00 111"
-        pointLayer.close()
-        print(pathOfProject)
+        
 
     def LoadFile (self):
 
@@ -43,7 +41,9 @@ class GapDetectionDialog(QtWidgets.QDialog, FORM_CLASS):
         completeName= pathOfProject+"/"+nameOfFile+".txt"
         print(completeName)
         pointLayer = open(completeName,"w") 
-        
+        pointLayer.write( "nejake souradnice 00 111")
+        pointLayer.close()
+        print(pathOfProject)
         
        
 

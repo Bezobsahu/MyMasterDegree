@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Dimap_Document name="20220515T141508_resampled_ndvi.hdr.dim">
+    <Metadata_Id>
+        <METADATA_FORMAT version="2.13.0">DIMAP</METADATA_FORMAT>
+        <METADATA_PROFILE>BEAM-DATAMODEL-V1</METADATA_PROFILE>
+    </Metadata_Id>
+    <Dataset_Id>
+        <DATASET_SERIES>BEAM-PRODUCT</DATASET_SERIES>
+        <DATASET_NAME>20220515T141508_resampled_ndvi.hdr</DATASET_NAME>
+    </Dataset_Id>
+    <Production>
+        <DATASET_PRODUCER_NAME />
+        <PRODUCT_TYPE>S2_MSI_Level-2A_NDVI</PRODUCT_TYPE>
+        <PRODUCT_SCENE_RASTER_START_TIME>15-MAY-2022 10:00:31.024000</PRODUCT_SCENE_RASTER_START_TIME>
+        <PRODUCT_SCENE_RASTER_STOP_TIME>15-MAY-2022 10:00:31.024000</PRODUCT_SCENE_RASTER_STOP_TIME>
+    </Production>
+    <Coordinate_Reference_System>
+        <WKT>
+             PROJCS["WGS 84 / UTM zone 33N", 
+               GEOGCS["WGS 84", 
+                 DATUM["World Geodetic System 1984", 
+                   SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+                   AUTHORITY["EPSG","6326"]], 
+                 PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+                 UNIT["degree", 0.017453292519943295], 
+                 AXIS["Geodetic longitude", EAST], 
+                 AXIS["Geodetic latitude", NORTH], 
+                 AUTHORITY["EPSG","4326"]], 
+               PROJECTION["Transverse_Mercator"], 
+               PARAMETER["central_meridian", 15.0], 
+               PARAMETER["latitude_of_origin", 0.0], 
+               PARAMETER["scale_factor", 0.9996], 
+               PARAMETER["false_easting", 500000.0], 
+               PARAMETER["false_northing", 0.0], 
+               UNIT["m", 1.0], 
+               AXIS["Easting", EAST], 
+               AXIS["Northing", NORTH], 
+               AUTHORITY["EPSG","32633"]]
+        </WKT>
+    </Coordinate_Reference_System>
+    <Geoposition>
+        <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,452920.0,5454260.0</IMAGE_TO_MODEL_TRANSFORM>
+    </Geoposition>
+    <Flag_Coding name="ndvi_flags">
+        <Flag>
+            <Flag_Name>NDVI_ARITHMETIC</Flag_Name>
+            <Flag_Index>1</Flag_Index>
+            <Flag_description>NDVI value calculation failed due to an arithmetic exception</Flag_description>
+        </Flag>
+        <Flag>
+            <Flag_Name>NDVI_NEGATIVE</Flag_Name>
+            <Flag_Index>2</Flag_Index>
+            <Flag_description>NDVI value is too low</Flag_description>
+        </Flag>
+        <Flag>
+            <Flag_Name>NDVI_SATURATION</Flag_Name>
+            <Flag_Index>4</Flag_Index>
+            <Flag_description>NDVI value is too high</Flag_description>
+        </Flag>
+    </Flag_Coding>
+    <Raster_Dimensions>
+        <NCOLS>1894</NCOLS>
+        <NROWS>930</NROWS>
+        <NBANDS>2</NBANDS>
+    </Raster_Dimensions>
+    <Data_Access>
+        <DATA_FILE_FORMAT>ENVI</DATA_FILE_FORMAT>
+        <DATA_FILE_FORMAT_DESC>ENVI File Format</DATA_FILE_FORMAT_DESC>
+        <DATA_FILE_ORGANISATION>BAND_SEPARATE</DATA_FILE_ORGANISATION>
+        <Data_File>
+            <DATA_FILE_PATH href="20220515T141508_resampled_ndvi.hdr.data/ndvi.hdr" />
+            <BAND_INDEX>0</BAND_INDEX>
+        </Data_File>
+        <Data_File>
+            <DATA_FILE_PATH href="20220515T141508_resampled_ndvi.hdr.data/ndvi_flags.hdr" />
+            <BAND_INDEX>1</BAND_INDEX>
+        </Data_File>
+        <Tie_Point_Grid_File>
+            <TIE_POINT_GRID_FILE_PATH href="20220515T141508_resampled_ndvi.hdr.data/tie_point_grids/tco3.hdr" />
+            <TIE_POINT_GRID_INDEX>0</TIE_POINT_GRID_INDEX>
+        </Tie_Point_Grid_File>
+        <Tie_Point_Grid_File>
+            <TIE_POINT_GRID_FILE_PATH href="20220515T141508_resampled_ndvi.hdr.data/tie_point_grids/tcwv.hdr" />
+            <TIE_POINT_GRID_INDEX>1</TIE_POINT_GRID_INDEX>
+        </Tie_Point_Grid_File>
+        <Tie_Point_Grid_File>
+            <TIE_POINT_GRID_FILE_PATH href="20220515T141508_resampled_ndvi.hdr.data/tie_point_grids/msl.hdr" />
+            <TIE_POINT_GRID_INDEX>2</TIE_POINT_GRID_INDEX>
+        </Tie_Point_Grid_File>
+        <Tie_Point_Grid_File>
+            <TIE_POINT_GRID_FILE_PATH href="20220515T141508_resampled_ndvi.hdr.data/tie_point_grids/r.hdr" />
+            <TIE_POINT_GRID_INDEX>3</TIE_POINT_GRID_INDEX>
+        </Tie_Point_Grid_File>
+        <Tie_Point_Grid_File>
+            <TIE_POINT_GRID_FILE_PATH href="20220515T141508_resampled_ndvi.hdr.data/tie_point_grids/10u.hdr" />
+            <TIE_POINT_GRID_INDEX>4</TIE_POINT_GRID_INDEX>
+        </Tie_Point_Grid_File>
+        <Tie_Point_Grid_File>
+            <TIE_POINT_GRID_FILE_PATH href="20220515T141508_resampled_ndvi.hdr.data/tie_point_grids/10v.hdr" />
+            <TIE_POINT_GRID_INDEX>5</TIE_POINT_GRID_INDEX>
+        </Tie_Point_Grid_File>
+        <Tie_Point_Grid_File>
+            <TIE_POINT_GRID_FILE_PATH href="20220515T141508_resampled_ndvi.hdr.data/tie_point_grids/aod550.hdr" />
+            <TIE_POINT_GRID_INDEX>6</TIE_POINT_GRID_INDEX>
+        </Tie_Point_Grid_File>
+        <Tie_Point_Grid_File>
+            <TIE_POINT_GRID_FILE_PATH href="20220515T141508_resampled_ndvi.hdr.data/tie_point_grids/z.hdr" />
+            <TIE_POINT_GRID_INDEX>7</TIE_POINT_GRID_INDEX>
+        </Tie_Point_Grid_File>
+        <Tie_Point_Grid_File>
+            <TIE_POINT_GRID_FILE_PATH href="20220515T141508_resampled_ndvi.hdr.data/tie_point_grids/bcaod550.hdr" />
+            <TIE_POINT_GRID_INDEX>8</TIE_POINT_GRID_INDEX>
+        </Tie_Point_Grid_File>
+        <Tie_Point_Grid_File>
+            <TIE_POINT_GRID_FILE_PATH href="20220515T141508_resampled_ndvi.hdr.data/tie_point_grids/omaod550.hdr" />
+            <TIE_POINT_GRID_INDEX>9</TIE_POINT_GRID_INDEX>
+        </Tie_Point_Grid_File>
+        <Tie_Point_Grid_File>
+            <TIE_POINT_GRID_FILE_PATH href="20220515T141508_resampled_ndvi.hdr.data/tie_point_grids/ssaod550.hdr" />
+            <TIE_POINT_GRID_INDEX>10</TIE_POINT_GRID_INDEX>
+        </Tie_Point_Grid_File>
+        <Tie_Point_Grid_File>
+            <TIE_POINT_GRID_FILE_PATH href="20220515T141508_resampled_ndvi.hdr.data/tie_point_grids/suaod550.hdr" />
+            <TIE_POINT_GRID_INDEX>11</TIE_POINT_GRID_INDEX>
+        </Tie_Point_Grid_File>
+        <Tie_Point_Grid_File>
+            <TIE_POINT_GRID_FILE_PATH href="20220515T141508_resampled_ndvi.hdr.data/tie_point_grids/aod469.hdr" />
+            <TIE_POINT_GRID_INDEX>12</TIE_POINT_GRID_INDEX>
+        </Tie_Point_Grid_File>
+        <Tie_Point_Grid_File>
+            <TIE_POINT_GRID_FILE_PATH href="20220515T141508_resampled_ndvi.hdr.data/tie_point_grids/aod670.hdr" />
+            <TIE_POINT_GRID_INDEX>13</TIE_POINT_GRID_INDEX>
+        </Tie_Point_Grid_File>
+        <Tie_Point_Grid_File>
+            <TIE_POINT_GRID_FILE_PATH href="20220515T141508_resampled_ndvi.hdr.data/tie_point_grids/aod865.hdr" />
+            <TIE_POINT_GRID_INDEX>14</TIE_POINT_GRID_INDEX>
+        </Tie_Point_Grid_File>
+        <Tie_Point_Grid_File>
+            <TIE_POINT_GRID_FILE_PATH href="20220515T141508_resampled_ndvi.hdr.data/tie_point_grids/aod1240.hdr" />
+            <TIE_POINT_GRID_INDEX>15</TIE_POINT_GRID_INDEX>
+        </Tie_Point_Grid_File>
+    </Data_Access>
+    <Tie_Point_Grids>
+        <NUM_TIE_POINT_GRIDS>16</NUM_TIE_POINT_GRIDS>
+        <Tie_Point_Grid_Info>
+            <TIE_POINT_GRID_INDEX>0</TIE_POINT_GRID_INDEX>
+            <TIE_POINT_DESCRIPTION>Total column water vapour at surface level provided by ECMWF</TIE_POINT_DESCRIPTION>
+            <PHYSICAL_UNIT>kg m**-2</PHYSICAL_UNIT>
+            <TIE_POINT_GRID_NAME>tco3</TIE_POINT_GRID_NAME>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <NCOLS>4</NCOLS>
+            <NROWS>3</NROWS>
+            <OFFSET_X>-415.5</OFFSET_X>
+            <OFFSET_Y>-915.5</OFFSET_Y>
+            <STEP_X>1220.0</STEP_X>
+            <STEP_Y>1220.0</STEP_Y>
+            <CYCLIC discontinuity="0">false</CYCLIC>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,452920.0,5454260.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Tie_Point_Grid_Info>
+        <Tie_Point_Grid_Info>
+            <TIE_POINT_GRID_INDEX>1</TIE_POINT_GRID_INDEX>
+            <TIE_POINT_DESCRIPTION>Total column ozone at surface level provided by ECMWF</TIE_POINT_DESCRIPTION>
+            <PHYSICAL_UNIT>kg m**-2</PHYSICAL_UNIT>
+            <TIE_POINT_GRID_NAME>tcwv</TIE_POINT_GRID_NAME>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <NCOLS>4</NCOLS>
+            <NROWS>3</NROWS>
+            <OFFSET_X>-415.5</OFFSET_X>
+            <OFFSET_Y>-915.5</OFFSET_Y>
+            <STEP_X>1220.0</STEP_X>
+            <STEP_Y>1220.0</STEP_Y>
+            <CYCLIC discontinuity="0">false</CYCLIC>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,452920.0,5454260.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Tie_Point_Grid_Info>
+        <Tie_Point_Grid_Info>
+            <TIE_POINT_GRID_INDEX>2</TIE_POINT_GRID_INDEX>
+            <TIE_POINT_DESCRIPTION>Mean sea level pressure at surface level provided by ECMWF</TIE_POINT_DESCRIPTION>
+            <PHYSICAL_UNIT>Pa</PHYSICAL_UNIT>
+            <TIE_POINT_GRID_NAME>msl</TIE_POINT_GRID_NAME>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <NCOLS>4</NCOLS>
+            <NROWS>3</NROWS>
+            <OFFSET_X>-415.5</OFFSET_X>
+            <OFFSET_Y>-915.5</OFFSET_Y>
+            <STEP_X>1220.0</STEP_X>
+            <STEP_Y>1220.0</STEP_Y>
+            <CYCLIC discontinuity="0">false</CYCLIC>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,452920.0,5454260.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Tie_Point_Grid_Info>
+        <Tie_Point_Grid_Info>
+            <TIE_POINT_GRID_INDEX>3</TIE_POINT_GRID_INDEX>
+            <TIE_POINT_DESCRIPTION>Relative humidity at surface level provided by ECMWF</TIE_POINT_DESCRIPTION>
+            <PHYSICAL_UNIT>%</PHYSICAL_UNIT>
+            <TIE_POINT_GRID_NAME>r</TIE_POINT_GRID_NAME>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <NCOLS>4</NCOLS>
+            <NROWS>3</NROWS>
+            <OFFSET_X>-415.5</OFFSET_X>
+            <OFFSET_Y>-915.5</OFFSET_Y>
+            <STEP_X>1220.0</STEP_X>
+            <STEP_Y>1220.0</STEP_Y>
+            <CYCLIC discontinuity="0">false</CYCLIC>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,452920.0,5454260.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Tie_Point_Grid_Info>
+        <Tie_Point_Grid_Info>
+            <TIE_POINT_GRID_INDEX>4</TIE_POINT_GRID_INDEX>
+            <TIE_POINT_DESCRIPTION>10 metre U wind component at surface level provided by ECMWF</TIE_POINT_DESCRIPTION>
+            <PHYSICAL_UNIT>m s**-1</PHYSICAL_UNIT>
+            <TIE_POINT_GRID_NAME>10u</TIE_POINT_GRID_NAME>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <NCOLS>4</NCOLS>
+            <NROWS>3</NROWS>
+            <OFFSET_X>-415.5</OFFSET_X>
+            <OFFSET_Y>-915.5</OFFSET_Y>
+            <STEP_X>1220.0</STEP_X>
+            <STEP_Y>1220.0</STEP_Y>
+            <CYCLIC discontinuity="0">false</CYCLIC>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,452920.0,5454260.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Tie_Point_Grid_Info>
+        <Tie_Point_Grid_Info>
+            <TIE_POINT_GRID_INDEX>5</TIE_POINT_GRID_INDEX>
+            <TIE_POINT_DESCRIPTION>10 metre V wind component at surface level provided by ECMWF</TIE_POINT_DESCRIPTION>
+            <PHYSICAL_UNIT>m s**-1</PHYSICAL_UNIT>
+            <TIE_POINT_GRID_NAME>10v</TIE_POINT_GRID_NAME>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <NCOLS>4</NCOLS>
+            <NROWS>3</NROWS>
+            <OFFSET_X>-415.5</OFFSET_X>
+            <OFFSET_Y>-915.5</OFFSET_Y>
+            <STEP_X>1220.0</STEP_X>
+            <STEP_Y>1220.0</STEP_Y>
+            <CYCLIC discontinuity="0">false</CYCLIC>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,452920.0,5454260.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Tie_Point_Grid_Info>
+        <Tie_Point_Grid_Info>
+            <TIE_POINT_GRID_INDEX>6</TIE_POINT_GRID_INDEX>
+            <TIE_POINT_DESCRIPTION>Total Aerosol Optical Depth at 550nm at surface level provided by CAMS</TIE_POINT_DESCRIPTION>
+            <PHYSICAL_UNIT>~</PHYSICAL_UNIT>
+            <TIE_POINT_GRID_NAME>aod550</TIE_POINT_GRID_NAME>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <NCOLS>4</NCOLS>
+            <NROWS>3</NROWS>
+            <OFFSET_X>-415.5</OFFSET_X>
+            <OFFSET_Y>-915.5</OFFSET_Y>
+            <STEP_X>1220.0</STEP_X>
+            <STEP_Y>1220.0</STEP_Y>
+            <CYCLIC discontinuity="0">false</CYCLIC>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,452920.0,5454260.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Tie_Point_Grid_Info>
+        <Tie_Point_Grid_Info>
+            <TIE_POINT_GRID_INDEX>7</TIE_POINT_GRID_INDEX>
+            <TIE_POINT_DESCRIPTION>Geopotential at surface level provided by CAMS</TIE_POINT_DESCRIPTION>
+            <PHYSICAL_UNIT>m**2 s**-2</PHYSICAL_UNIT>
+            <TIE_POINT_GRID_NAME>z</TIE_POINT_GRID_NAME>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <NCOLS>4</NCOLS>
+            <NROWS>3</NROWS>
+            <OFFSET_X>-415.5</OFFSET_X>
+            <OFFSET_Y>-915.5</OFFSET_Y>
+            <STEP_X>1220.0</STEP_X>
+            <STEP_Y>1220.0</STEP_Y>
+            <CYCLIC discontinuity="0">false</CYCLIC>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,452920.0,5454260.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Tie_Point_Grid_Info>
+        <Tie_Point_Grid_Info>
+            <TIE_POINT_GRID_INDEX>8</TIE_POINT_GRID_INDEX>
+            <TIE_POINT_DESCRIPTION>Black Carbon Aerosol Optical Depth at 550nm at surface level provided by CAMS</TIE_POINT_DESCRIPTION>
+            <PHYSICAL_UNIT>~</PHYSICAL_UNIT>
+            <TIE_POINT_GRID_NAME>bcaod550</TIE_POINT_GRID_NAME>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <NCOLS>4</NCOLS>
+            <NROWS>3</NROWS>
+            <OFFSET_X>-415.5</OFFSET_X>
+            <OFFSET_Y>-915.5</OFFSET_Y>
+            <STEP_X>1220.0</STEP_X>
+            <STEP_Y>1220.0</STEP_Y>
+            <CYCLIC discontinuity="0">false</CYCLIC>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,452920.0,5454260.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Tie_Point_Grid_Info>
+        <Tie_Point_Grid_Info>
+            <TIE_POINT_GRID_INDEX>9</TIE_POINT_GRID_INDEX>
+            <TIE_POINT_DESCRIPTION>Organic Matter Aerosol Optical Depth at 550nm at surface level provided by CAMS</TIE_POINT_DESCRIPTION>
+            <PHYSICAL_UNIT>~</PHYSICAL_UNIT>
+            <TIE_POINT_GRID_NAME>omaod550</TIE_POINT_GRID_NAME>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <NCOLS>4</NCOLS>
+            <NROWS>3</NROWS>
+            <OFFSET_X>-415.5</OFFSET_X>
+            <OFFSET_Y>-915.5</OFFSET_Y>
+            <STEP_X>1220.0</STEP_X>
+            <STEP_Y>1220.0</STEP_Y>
+            <CYCLIC discontinuity="0">false</CYCLIC>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,452920.0,5454260.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Tie_Point_Grid_Info>
+        <Tie_Point_Grid_Info>
+            <TIE_POINT_GRID_INDEX>10</TIE_POINT_GRID_INDEX>
+            <TIE_POINT_DESCRIPTION>Sea Salt Aerosol Optical Depth at 550nm at surface level provided by CAMS</TIE_POINT_DESCRIPTION>
+            <PHYSICAL_UNIT>~</PHYSICAL_UNIT>
+            <TIE_POINT_GRID_NAME>ssaod550</TIE_POINT_GRID_NAME>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <NCOLS>4</NCOLS>
+            <NROWS>3</NROWS>
+            <OFFSET_X>-415.5</OFFSET_X>
+            <OFFSET_Y>-915.5</OFFSET_Y>
+            <STEP_X>1220.0</STEP_X>
+            <STEP_Y>1220.0</STEP_Y>
+            <CYCLIC discontinuity="0">false</CYCLIC>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,452920.0,5454260.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Tie_Point_Grid_Info>
+        <Tie_Point_Grid_Info>
+            <TIE_POINT_GRID_INDEX>11</TIE_POINT_GRID_INDEX>
+            <TIE_POINT_DESCRIPTION>Sulphate Aerosol Optical Depth at 550nm at surface level provided by CAMS</TIE_POINT_DESCRIPTION>
+            <PHYSICAL_UNIT>~</PHYSICAL_UNIT>
+            <TIE_POINT_GRID_NAME>suaod550</TIE_POINT_GRID_NAME>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <NCOLS>4</NCOLS>
+            <NROWS>3</NROWS>
+            <OFFSET_X>-415.5</OFFSET_X>
+            <OFFSET_Y>-915.5</OFFSET_Y>
+            <STEP_X>1220.0</STEP_X>
+            <STEP_Y>1220.0</STEP_Y>
+            <CYCLIC discontinuity="0">false</CYCLIC>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,452920.0,5454260.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Tie_Point_Grid_Info>
+        <Tie_Point_Grid_Info>
+            <TIE_POINT_GRID_INDEX>12</TIE_POINT_GRID_INDEX>
+            <TIE_POINT_DESCRIPTION>Total Aerosol Optical Depth at 469nm at surface level provided by CAMS</TIE_POINT_DESCRIPTION>
+            <PHYSICAL_UNIT>~</PHYSICAL_UNIT>
+            <TIE_POINT_GRID_NAME>aod469</TIE_POINT_GRID_NAME>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <NCOLS>4</NCOLS>
+            <NROWS>3</NROWS>
+            <OFFSET_X>-415.5</OFFSET_X>
+            <OFFSET_Y>-915.5</OFFSET_Y>
+            <STEP_X>1220.0</STEP_X>
+            <STEP_Y>1220.0</STEP_Y>
+            <CYCLIC discontinuity="0">false</CYCLIC>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,452920.0,5454260.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Tie_Point_Grid_Info>
+        <Tie_Point_Grid_Info>
+            <TIE_POINT_GRID_INDEX>13</TIE_POINT_GRID_INDEX>
+            <TIE_POINT_DESCRIPTION>Total Aerosol Optical Depth at 670nm at surface level provided by CAMS</TIE_POINT_DESCRIPTION>
+            <PHYSICAL_UNIT>~</PHYSICAL_UNIT>
+            <TIE_POINT_GRID_NAME>aod670</TIE_POINT_GRID_NAME>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <NCOLS>4</NCOLS>
+            <NROWS>3</NROWS>
+            <OFFSET_X>-415.5</OFFSET_X>
+            <OFFSET_Y>-915.5</OFFSET_Y>
+            <STEP_X>1220.0</STEP_X>
+            <STEP_Y>1220.0</STEP_Y>
+            <CYCLIC discontinuity="0">false</CYCLIC>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,452920.0,5454260.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Tie_Point_Grid_Info>
+        <Tie_Point_Grid_Info>
+            <TIE_POINT_GRID_INDEX>14</TIE_POINT_GRID_INDEX>
+            <TIE_POINT_DESCRIPTION>Total Aerosol Optical Depth at 865nm at surface level provided by CAMS</TIE_POINT_DESCRIPTION>
+            <PHYSICAL_UNIT>~</PHYSICAL_UNIT>
+            <TIE_POINT_GRID_NAME>aod865</TIE_POINT_GRID_NAME>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <NCOLS>4</NCOLS>
+            <NROWS>3</NROWS>
+            <OFFSET_X>-415.5</OFFSET_X>
+            <OFFSET_Y>-915.5</OFFSET_Y>
+            <STEP_X>1220.0</STEP_X>
+            <STEP_Y>1220.0</STEP_Y>
+            <CYCLIC discontinuity="0">false</CYCLIC>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,452920.0,5454260.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Tie_Point_Grid_Info>
+        <Tie_Point_Grid_Info>
+            <TIE_POINT_GRID_INDEX>15</TIE_POINT_GRID_INDEX>
+            <TIE_POINT_DESCRIPTION>Total Aerosol Optical Depth at 1240nm at surface level provided by CAMS</TIE_POINT_DESCRIPTION>
+            <PHYSICAL_UNIT>~</PHYSICAL_UNIT>
+            <TIE_POINT_GRID_NAME>aod1240</TIE_POINT_GRID_NAME>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <NCOLS>4</NCOLS>
+            <NROWS>3</NROWS>
+            <OFFSET_X>-415.5</OFFSET_X>
+            <OFFSET_Y>-915.5</OFFSET_Y>
+            <STEP_X>1220.0</STEP_X>
+            <STEP_Y>1220.0</STEP_Y>
+            <CYCLIC discontinuity="0">false</CYCLIC>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,452920.0,5454260.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Tie_Point_Grid_Info>
+    </Tie_Point_Grids>
+    <Image_Display>
+        <Band_Statistics>
+            <BAND_INDEX>0</BAND_INDEX>
+            <STX_MIN>-2.0833332538604736</STX_MIN>
+            <STX_MAX>1.0635838508605957</STX_MAX>
+            <STX_MEAN>0.7117756700442491</STX_MEAN>
+            <STX_STD_DEV>0.2584578712989953</STX_STD_DEV>
+            <STX_RES_LEVEL>3</STX_RES_LEVEL>
+            <HISTOGRAM>2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,2,0,0,1,0,0,1,0,0,0,0,0,1,0,1,2,1,1,0,0,0,0,0,1,0,0,1,0,0,2,0,0,0,0,1,0,0,1,0,0,0,1,0,1,0,1,0,1,1,0,0,0,0,2,0,0,1,0,1,0,0,3,1,0,1,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1,0,0,0,1,0,1,1,0,0,0,1,1,0,0,1,0,0,0,0,1,1,0,0,0,2,0,2,0,0,0,1,3,0,0,0,0,0,2,1,2,2,0,1,0,0,1,0,0,0,1,2,1,2,1,2,1,0,1,1,0,1,1,2,0,1,2,2,1,3,0,1,4,0,3,0,4,3,1,0,2,4,2,1,1,3,1,4,1,5,1,2,3,1,0,1,2,0,6,1,7,0,1,4,0,1,3,1,1,2,3,2,1,2,2,2,0,5,2,4,2,2,2,1,4,5,5,2,0,4,3,6,5,1,8,3,3,8,10,7,10,2,9,6,13,7,8,7,12,18,22,48,77,116,139,184,152,182,153,125,115,95,88,68,53,49,57,47,48,45,34,38,35,31,34,40,28,40,40,42,28,33,29,43,41,38,27,34,33,36,30,30,33,35,38,31,39,31,23,45,33,40,40,38,37,38,35,42,31,42,31,41,34,51,46,47,36,32,48,40,38,46,41,46,57,70,80,82,121,129,138,145,178,195,185,213,188,154,129,159,146,158,195,154,174,155,143,155,111,139,148,147,151,155,169,144,191,196,196,215,222,262,334,366,431,433,485,536,579,571,580,595,592,586,574,555,571,610,638,610,625,583,639,626,621,678,708,665,609,563,493,367,324,245,103,34,11,0,2,1,1,0,0,1,1,0,1,0,0,0,1,3</HISTOGRAM>
+            <NUM_COLORS>256</NUM_COLORS>
+            <Color_Palette_Point>
+                <SAMPLE>2.7006352320313454E-4</SAMPLE>
+                <COLOR red="0" green="0" blue="0" alpha="255" />
+            </Color_Palette_Point>
+            <Color_Palette_Point>
+                <SAMPLE>0.46739057125523686</SAMPLE>
+                <COLOR red="128" green="128" blue="128" alpha="255" />
+            </Color_Palette_Point>
+            <Color_Palette_Point>
+                <SAMPLE>0.9345110789872706</SAMPLE>
+                <COLOR red="255" green="255" blue="255" alpha="255" />
+            </Color_Palette_Point>
+            <NO_DATA_COLOR red="0" green="0" blue="0" alpha="0" />
+            <HISTOGRAM_MATCHING>None</HISTOGRAM_MATCHING>
+        </Band_Statistics>
+    </Image_Display>
+    <Masks>
+        <Mask type="Maths">
+            <NAME value="NDVI_ARITHMETIC" />
+            <MASK_RASTER_WIDTH value="1894" />
+            <MASK_RASTER_HEIGHT value="930" />
+            <DESCRIPTION value="An arithmetic exception occurred." />
+            <COLOR red="255" green="0" blue="0" alpha="255" />
+            <TRANSPARENCY value="0.7" />
+            <IMAGE_TO_MODEL_TRANSFORM value="10.0,0.0,0.0,-10.0,452920.0,5454260.0" />
+            <EXPRESSION value="ndvi_flags.NDVI_ARITHMETIC" />
+        </Mask>
+        <Mask type="Maths">
+            <NAME value="NDVI_NEGATIVE" />
+            <MASK_RASTER_WIDTH value="1894" />
+            <MASK_RASTER_HEIGHT value="930" />
+            <DESCRIPTION value="NDVI value is too low." />
+            <COLOR red="255" green="0" blue="0" alpha="255" />
+            <TRANSPARENCY value="0.7" />
+            <IMAGE_TO_MODEL_TRANSFORM value="10.0,0.0,0.0,-10.0,452920.0,5454260.0" />
+            <EXPRESSION value="ndvi_flags.NDVI_NEGATIVE" />
+        </Mask>
+        <Mask type="Maths">
+            <NAME value="NDVI_SATURATION" />
+            <MASK_RASTER_WIDTH value="1894" />
+            <MASK_RASTER_HEIGHT value="930" />
+            <DESCRIPTION value="NDVI value is too high." />
+            <COLOR red="178" green="0" blue="0" alpha="255" />
+            <TRANSPARENCY value="0.7" />
+            <IMAGE_TO_MODEL_TRANSFORM value="10.0,0.0,0.0,-10.0,452920.0,5454260.0" />
+            <EXPRESSION value="ndvi_flags.NDVI_SATURATION" />
+        </Mask>
+    </Masks>
+    <Image_Interpretation>
+        <Spectral_Band_Info>
+            <BAND_INDEX>0</BAND_INDEX>
+            <BAND_DESCRIPTION />
+            <BAND_NAME>ndvi</BAND_NAME>
+            <BAND_RASTER_WIDTH>1894</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>930</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>float32</DATA_TYPE>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>false</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>0.0</NO_DATA_VALUE>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,452920.0,5454260.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+        <Spectral_Band_Info>
+            <BAND_INDEX>1</BAND_INDEX>
+            <BAND_DESCRIPTION>NDVI specific flags</BAND_DESCRIPTION>
+            <BAND_NAME>ndvi_flags</BAND_NAME>
+            <BAND_RASTER_WIDTH>1894</BAND_RASTER_WIDTH>
+            <BAND_RASTER_HEIGHT>930</BAND_RASTER_HEIGHT>
+            <DATA_TYPE>int32</DATA_TYPE>
+            <SOLAR_FLUX>0.0</SOLAR_FLUX>
+            <BAND_WAVELEN>0.0</BAND_WAVELEN>
+            <BANDWIDTH>0.0</BANDWIDTH>
+            <FLAG_CODING_NAME>ndvi_flags</FLAG_CODING_NAME>
+            <SCALING_FACTOR>1.0</SCALING_FACTOR>
+            <SCALING_OFFSET>0.0</SCALING_OFFSET>
+            <LOG10_SCALED>false</LOG10_SCALED>
+            <NO_DATA_VALUE_USED>false</NO_DATA_VALUE_USED>
+            <NO_DATA_VALUE>0.0</NO_DATA_VALUE>
+            <IMAGE_TO_MODEL_TRANSFORM>10.0,0.0,0.0,-10.0,452920.0,5454260.0</IMAGE_TO_MODEL_TRANSFORM>
+        </Spectral_Band_Info>
+    </Image_Interpretation>
+    <Dataset_Sources>
+        <MDElem name="metadata">
+            <MDElem name="Processing_Graph">
+                <MDElem name="node.0">
+                    <MDATTR name="id" type="ascii" mode="rw">NdviOp$183F00840C1</MDATTR>
+                    <MDATTR name="operator" type="ascii" mode="rw">NdviOp</MDATTR>
+                    <MDATTR name="moduleName" type="ascii" mode="rw">SNAP NDVI Processor</MDATTR>
+                    <MDATTR name="moduleVersion" type="ascii" mode="rw">9.0.1</MDATTR>
+                    <MDATTR name="purpose" type="ascii" mode="rw">The retrieves the Normalized Difference Vegetation Index (NDVI).</MDATTR>
+                    <MDATTR name="authors" type="ascii" mode="rw">Maximilian Aulinger, Thomas Storm</MDATTR>
+                    <MDATTR name="version" type="ascii" mode="rw">1.3</MDATTR>
+                    <MDATTR name="copyright" type="ascii" mode="rw">Copyright (C) 2016 by Brockmann Consult (info@brockmann-consult.de)</MDATTR>
+                    <MDATTR name="processingTime" type="ascii" mode="rw">2022-10-19T11:36:56.259Z</MDATTR>
+                    <MDElem name="sources">
+                        <MDATTR name="source" type="ascii" mode="rw">file:/G:/Internet/Geo-cosi/20220515T141508_resampled.dim</MDATTR>
+                    </MDElem>
+                    <MDElem name="parameters">
+                        <MDATTR name="nirFactor" type="ascii">1.0</MDATTR>
+                        <MDATTR name="redFactor" type="ascii">1.0</MDATTR>
+                        <MDATTR name="nirSourceBand" type="ascii">B8</MDATTR>
+                        <MDATTR name="redSourceBand" type="ascii">B4</MDATTR>
+                    </MDElem>
+                </MDElem>
+                <MDElem name="node.1">
+                    <MDATTR name="id" type="ascii" mode="rw">Write$183F00840D1</MDATTR>
+                    <MDATTR name="operator" type="ascii" mode="rw">Write</MDATTR>
+                    <MDATTR name="moduleName" type="ascii" mode="rw">SNAP Graph Processing Framework (GPF)</MDATTR>
+                    <MDATTR name="moduleVersion" type="ascii" mode="rw">9.0.1</MDATTR>
+                    <MDATTR name="purpose" type="ascii" mode="rw">Writes a data product to a file.</MDATTR>
+                    <MDATTR name="authors" type="ascii" mode="rw">Marco Zuehlke, Norman Fomferra</MDATTR>
+                    <MDATTR name="version" type="ascii" mode="rw">1.3</MDATTR>
+                    <MDATTR name="copyright" type="ascii" mode="rw">(c) 2010 by Brockmann Consult</MDATTR>
+                    <MDATTR name="processingTime" type="ascii" mode="rw">2022-10-19T11:36:56.275Z</MDATTR>
+                    <MDElem name="sources">
+                        <MDATTR name="sourceProduct" type="ascii" mode="rw">file:/G:/Internet/Geo-cosi/20220515T141508_resampled_ndvi.dim</MDATTR>
+                    </MDElem>
+                    <MDElem name="parameters">
+                        <MDATTR name="writeEntireTileRows" type="ascii">true</MDATTR>
+                        <MDATTR name="file" type="ascii">G:\Internet\Geo-cosi\20220515T141508_resampled_ndvi.dim</MDATTR>
+                        <MDATTR name="deleteOutputOnFailure" type="ascii">true</MDATTR>
+                        <MDATTR name="formatName" type="ascii">BEAM-DIMAP</MDATTR>
+                        <MDATTR name="clearCacheAfterRowWrite" type="ascii">false</MDATTR>
+                    </MDElem>
+                </MDElem>
+            </MDElem>
+        </MDElem>
+    </Dataset_Sources>
+</Dimap_Document>

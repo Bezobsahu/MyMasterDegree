@@ -48,3 +48,107 @@ Idelogie
 Politika
 Vývoj vědy
 Vývoj technologií
+
+# KALOKAGHATIA
+- ideál krásy
+- Spojení dobra (mravní složka, poznání) a krásy (fyzické zdraví, tělesná zdatnost, umění)
+
+## Sokratická metoda
+- dialog menom
+
+## Novověk
+- pojď se chlapče moudrým býti
+
+### Komenský 
+- Komenský rozvinul zásady vyučování
+    - Všichni, všechno, snadno, rychle a důkladně
+    - Všechno ať probíhá přirozeně, bez nátlaku
+- Pedagogické názory
+- Zajímal se o výuku latiny
+- Rozdělil lidský věk do časových úseků
+
+## Osvícenství
+### Tereziánská reformy školství
+- Důsledkem prohraných válek
+- Souvislost s osvícenskýn absolutismem 
+
+1774 - reforma Marie Terezie, školství se stalo součástí politiky státu
+- Zavedena jednotná organizace škol
+- Změny se týkaly především primárního vzdělání
+- Součástí reforem kurzy pro dospělé včetně výukyy praktických dovedností
+- Zavedena příprava pro učitele
+- Problém germanizace
+
+Další modernizace
+1848- Exner-Bonitzova reforma, modernizace gymnázií, délka studia 8 let
+1869- Hasnerův zákon - zavedena ucelená soustava navazujících typů škol
+
+# Reformní hnutí, alternativní směry
+- cca 1900
+- Termíny reformní školy, nová výchova, progresivní výchova aj,
+
+## Znaky alternativních škol
+
+#
+- kompenzace 
+- regenerace (obnovování)
+- adaptace
+
+# KURIKULUM
+OBSAH VZDĚLÁVÁNÍ
+co si má žák osvojit
+1. Zamýšlený
+2. Realizovaný
+3. Osvojený
+
+# Didaktická transformace
+
+
+1. Profese, 
+2. Ontodidaktická transformace
+3. Kurikulární obsahy
+https://rvp.cz/
+- výsledky vzdělávání
+- organizaci a podmínky vzdělávání
+- obsah vzdělávání
+- průřezová témata
+STRUKTURA RVP (rámcový vzdělávací program)
+- Kurikulární rámce
+    - vzdělávací oblasti
+    - okruhy
+4. psychodidaktická transformace
+5. obsah výuky
+6. kognitivní tansformace
+7. Znalosti jako obsah mysli
+8. Kontrolní transformace
+
+## Cíle vzdělávání
+### Cíle z hlediska obsahu
+H. Bloomova taxonomie
+Oblasti učiva
+- Kognitivní cíle (faktuální znalosti, procedurální znalost)
+    - taxonomie v kongitivní oblasti
+    Zapamatovat si
+    Poruzumět
+    Aplikovat
+    Analyzovat
+    Hodnotit
+    Tvořit
+- Psychomotorické cíle
+    - taxonomie
+    Nápodoba
+    Manipulace
+    Zpřesnění
+    Koordinace
+    Automatizace
+- Afektivní cíle (postoje hodnoty motivace)
+    - taxonomie
+    Vnímání
+    Reagování
+    Uznávání
+    Organizování
+    Zvitření
+## Funkce cíle
+- určuje obsah výuky
+- stanovuje metody a formy
+- slouží pro řízení průběhu učení

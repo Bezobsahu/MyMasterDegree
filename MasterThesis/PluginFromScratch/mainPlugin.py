@@ -1,6 +1,8 @@
 from qgis.PyQt.QtGui import *
 from qgis.PyQt.QtWidgets import *
 
+from plugin_from_scratch import PluginFromScratch
+
 from . import resources
 
 
@@ -18,9 +20,6 @@ class TestPlugin:
         self.iface.addPluginToMenu("&Test plugins", self.action)
         self.iface.addToolBarIcon(self.action)
 
-       
-
-
     def unload(self):
         self.iface.removeToolBarIcon(self.action)
             
@@ -30,3 +29,5 @@ class TestPlugin:
 
     def run(self):
         QMessageBox.information(None, 'Minimal plugin', 'Do something useful here')
+        self.window = PluginFromScratch()
+        

@@ -40,4 +40,71 @@ $T_p=\frac{\Delta_{y_{max}}}{y_{max}-y_{min}}*100$
 $\Delta_{y_{max}}-$ maximální absolutní přípustná chyba přístroje
 $y_{max}-y_{min}-$ měřící rozpětí rozpětí přístroje
 
+# Typy senzorů 
 
+- dle měřené veličiny
+- fyzikálního principu
+- technologie
+- aktivní (jsou zdrojem energie) / pasivní (napájeny)
+- kontaktní / bezkontaktní
+- analogový / číslicový / dvoustavový
+
+# Inteligentní senzory
+Základní znaky
+- Obousměrná komunikace
+- Číslicová část
+- Diagnostika
+- Autokalibrace
+- Korekce chyb (linearizace)
+- Výstup: 
+    - číslicový
+    - analogový 
+    - kombinovaný
+
+# Typy senzorů dle měřené veličiny
+- Mechanické
+- Tepelné
+- Optické 
+- Akustické
+- Chemické a bio
+- Elektrické a magnetické
+
+# Druhy měřených veličin
+
+- Senzory teploty
+- Senzory posunutí a polohy
+- Senzory vzdálenosti a přiblížení
+- Senzory rychlosti a otáčení
+- Senzory zrychlení a vibrací
+- Senzory prostředí
+- Detektory kouře
+- Snímání povrch a prostoru
+
+# Druhy výstupních signálů ze senzorů
+- Dvoustavové 
+- Spojité
+- Digitální
+- Stavový
+
+# Charakter výstupních signálů ze senzorů
+- Lineární
+- Nelineární
+- Nelineární s lineárními částmi
+
+# Veličina výstupního signálu ze senzrzu
+
+- Napětí (o-5 V; 0-10 V; -5 až 5 V atp.)
+- Proud (0-20mA; 4-20mA)
+- Frekvence (na základě změny veličiny změna frekvennce)
+- Echo (peak odezvy signálu)
+
+
+# Provedení senzorů
+- Stabilita senzoru
+- Samoohřev senzoru
+- Přesnost senzoru
+- Hmotnost/objem/ velikost senzoru
+- Odolnost
+
+# Kompenzační obvody
+- Kompenzační obvody se používají pro komenzaci vlivu dalších veličin

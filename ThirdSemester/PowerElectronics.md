@@ -57,3 +57,29 @@
 ### Diody specialní
 - Diody rychlé a frekvnční 
 - r:$t{rr}= 2-5\mu s$
+
+# Jednopulsní usměrňovač s odporově induktivní zátěží
+$\Tau = \frac {L} {R}$
+#### Střední hodnota výstupního napětí:
+$U_{dAV}= \frac 1 {2\pi} \int \limits_0^{\pi+\xi} \sqrt 2 *U *\sin (\omega t)*d(\omega t)=  \frac 1 {2\pi}*\sqrt 2*U[-cos(\cot)]^{\pi+\xi}= \frac {\sqrt 2 * U} {\pi} * \frac {1+\cos(\xi)} {2}$
+
+STŘÍDAČE
+    - přeměna ss-soustavy na střídavou
+- S VNĚJŠÍ KOMUTACÍ
+     - invetory - usměrňovače se specifickým druhem řízení
+- S VLASTNÍ KOMUTACÍ
+    - vybaveny komutačními obvody nebo vypinatelnými součástmi
+- SPECIÁLNÍ (měkká komutace)
+    - komutovány v okamžiku
+    - AC strana obsahuje rezonanční obvod
+
+STŘÍDAČ
+
+- NAPĚŤOVÝ
+    - malá $Z_i$, přítomnost C
+    - převažuje u regul. AC-pohonů
+- PROUDOVÝ
+     - velká $Z_i$, přítomnost L
+     - tvar produ nezávislí na parametrech zátěže
+     - náročnost na napěťvou odolnost elektronických součástech
+

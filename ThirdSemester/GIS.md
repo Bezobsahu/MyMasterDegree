@@ -10,4 +10,11 @@
 
 Tématická mapa - o druhu objektu
 
+## Zářivý tok
+## Spektrální zář
+## Spektrální odrazivost
 
+čím delší je vlnová délka tím nižší obsah energie má záření
+přirozeně emitované dlouhovlnného zařízení bude hůře zjistitelnlé než energie krátkovlnná
+
+**emisivita** poměr intenzity vyzařování reálného tělesa a intenzity vyzařování absolutně černého tělesa
