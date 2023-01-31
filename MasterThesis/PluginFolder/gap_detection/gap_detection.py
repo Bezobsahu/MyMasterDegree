@@ -27,6 +27,8 @@ from qgis.PyQt.QtWidgets import *
 from qgis.core import * 
 
 
+
+
 # Initialize Qt resources from file resources.py
 from .resources import *
 # Import the code for the dialog
@@ -195,13 +197,16 @@ class GapDetection:
 
         # Clearing combox before start
         self.dlg.cbLayers.clear ()
+        self.dlg.cbLayers_2.clear ()
         self.layer_names.clear ()
         
         # 
         for layer in QgsProject.instance().mapLayers().values():
             self.layer_names.append(layer.name())
             self.all_layers.append(layer)
-        
+            
+        self.dlg.all_layers = self.all_layers
+
         # Filling combox 1 
         self.dlg.cbLayers.addItems(self.layer_names)
 

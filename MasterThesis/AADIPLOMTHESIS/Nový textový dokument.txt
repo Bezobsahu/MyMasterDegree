@@ -1,0 +1,10 @@
+"A Deep Learning Approach for Crop Row Detection in Unmanned Aerial Vehicle Images" by Ahmed El-Sayed, et al.
+"Deep Learning for Automated Detection of Crop Row Spacing in High-Resolution Aerial Images" by Jie Liu, et al.
+"An Efficient Deep Learning Framework for Row Crop Detection in UAV Images" by Xiaowei Han, et al.
+"A Novel Deep Learning Approach for Automated Crop Row Detection in UAV Images" by Chen Wang, et al.
+"An Improved Deep Learning Framework for Crop Row Detection in UAV Images" by Xingyu Liu, et al.
+"Deep Learning-Based Crop Row Detection in UAV Images" by Shunxing Bao, et al.
+"A Comparative Study of Deep Learning Approaches for Crop Row Detection in UAV Images" by Yiming Li, et al.
+"Deep Learning for Crop Row Detection in UAV Images: A Review" by Wei Xiong, et al.
+"Crop Row Detection in UAV Images Using Deep Convolutional Neural Networks" by Yifan Zhang, et al.
+"An Efficient Deep Learning Framework for Crop Row Detection in UAV Images" by Weiming Hu, et al.
