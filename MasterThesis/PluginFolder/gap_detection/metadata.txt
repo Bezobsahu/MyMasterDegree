@@ -3,14 +3,14 @@
 # This file should be included when you package your plugin.# Mandatory items:
 
 [general]
-name=Hop Gap Detection
+name=Detekce mezerovitosti chmele
 qgisMinimumVersion=3.0
-description=recognize gaps in hop growth
+description=Rozpozná rostliny a určí mezerovitost 
 version=0.1
 author=Josef Kořínek
 email=josefkorinek@bezobsahu.cz
 
-about=This program is for my master thesis. Its should generate points of mising plants from raster image taken by dron.
+about= Tento program je pro moji diplomovou práci. Z rastrového obrazu pořízeného pomocí UAV generuje body rostlin a počítá mezerovitost v řádku
 
 tracker=http://bugs
 repository=http://repo

@@ -169,7 +169,7 @@ class GapDetection:
         icon_path = ':/plugins/gap_detection/icon.png'
         self.add_action(
             icon_path,
-            text=self.tr(u'recognize gaps in hop growth'),
+            text=self.tr(u'Identifikuje rostliny a určuje mezerovitost'),
             callback=self.run,
             parent=self.iface.mainWindow())
 
@@ -198,13 +198,15 @@ class GapDetection:
         # Clearing combox before start
         self.dlg.cbLayers.clear ()
         self.dlg.cbLayers_2.clear ()
+        self.dlg.cbLayers_3.clear ()
         self.layer_names.clear ()
         
-        # 
+        # Load layers from interface
         for layer in QgsProject.instance().mapLayers().values():
             self.layer_names.append(layer.name())
             self.all_layers.append(layer)
-            
+        
+        # Trasfer all layers to dialog class
         self.dlg.all_layers = self.all_layers
 
         # Filling combox 1 
@@ -212,6 +214,9 @@ class GapDetection:
 
         # Filling combox 2
         self.dlg.cbLayers_2.addItems(self.layer_names)
+
+        # Filling combox 3
+        self.dlg.cbLayers_3.addItems(self.layer_names)
 
         # show the dialog
         self.dlg.show()
