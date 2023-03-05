@@ -26,9 +26,6 @@ from qgis.PyQt.QtGui import QIcon
 from qgis.PyQt.QtWidgets import *
 from qgis.core import * 
 
-
-
-
 # Initialize Qt resources from file resources.py
 from .resources import *
 # Import the code for the dialog
@@ -65,8 +62,7 @@ class GapDetection:
 
         # Declare instance attributes
         self.actions = []
-        self.layer_names = []
-        self.all_layers = []
+       
         self.menu = self.tr(u'&Hop Gap Detection')
 
         # Check if plugin was started the first time in current QGIS session
@@ -195,28 +191,47 @@ class GapDetection:
             self.first_start = False
             self.dlg = GapDetectionDialog()
 
+        # Decleare atributes
+        self.raster_layer_names = []
+        self.raster_all_layers = []
+        self.polygon_layer_names = []
+        self.polygon_all_layers = []
+        self.line_layer_names = []
+        self.line_all_layers = []
+
+
         # Clearing combox before start
         self.dlg.cbLayers.clear ()
         self.dlg.cbLayers_2.clear ()
         self.dlg.cbLayers_3.clear ()
-        self.layer_names.clear ()
+        self.raster_layer_names.clear ()
+        self.polygon_layer_names.clear ()
+        self.line_layer_names.clear ()
         
         # Load layers from interface
         for layer in QgsProject.instance().mapLayers().values():
-            self.layer_names.append(layer.name())
-            self.all_layers.append(layer)
+            if layer.type()==QgsMapLayer.VectorLayer:
+                if int(layer.geometryType())==1:
+                    self.line_layer_names.append(layer.name())
+                    self.line_all_layers.append(layer)
+                   
+                elif int(layer.geometryType())==2:
+                    self.polygon_layer_names.append(layer.name())
+                    self.polygon_all_layers.append(layer)
+                   
+            elif layer.type()==QgsMapLayerType.RasterLayer:
+                self.raster_layer_names.append(layer.name())
+                self.raster_all_layers.append(layer)
         
         # Trasfer all layers to dialog class
-        self.dlg.all_layers = self.all_layers
+        self.dlg.raster_all_layers = self.raster_all_layers
+        self.dlg.polygon_all_layers = self.polygon_all_layers
+        self.dlg.line_all_layers = self.line_all_layers
 
-        # Filling combox 1 
-        self.dlg.cbLayers.addItems(self.layer_names)
-
-        # Filling combox 2
-        self.dlg.cbLayers_2.addItems(self.layer_names)
-
-        # Filling combox 3
-        self.dlg.cbLayers_3.addItems(self.layer_names)
+        # Filling comboboxes 1-3
+        self.dlg.cbLayers.addItems(self.raster_layer_names)
+        self.dlg.cbLayers_2.addItems(self.polygon_layer_names)
+        self.dlg.cbLayers_3.addItems(self.line_layer_names)
 
         # show the dialog
         self.dlg.show()
